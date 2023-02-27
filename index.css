@@ -1823,7 +1823,7 @@ table {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(/src/resources/images/layouts/bg_shortcut.svg) no-repeat center center;
+  background: url(src/resources/images/layouts/bg_shortcut.svg) no-repeat center center;
   background-size: 100%;
   opacity: 0.4;
   transition: opacity 0.2s;
@@ -1991,7 +1991,7 @@ table {
   left: 178px;
   width: 143px;
   height: 197px;
-  background: url(/src/resources/images/main/coin_01.png) repeat-x left top;
+  background: url(src/resources/images/main/coin_01.png) repeat-x left top;
 }
 .section_play .obj_coin span:nth-of-type(2),
 .section_last .obj_coin span:nth-of-type(2) {
@@ -1999,7 +1999,7 @@ table {
   right: -3%;
   width: 221px;
   height: 242px;
-  background: url(/src/resources/images/main/coin_02.png) repeat-x left top;
+  background: url(src/resources/images/main/coin_02.png) repeat-x left top;
 }
 .section_play .obj_coin span:nth-of-type(3),
 .section_last .obj_coin span:nth-of-type(3) {
@@ -2007,12 +2007,12 @@ table {
   left: -1%;
   width: 85px;
   height: 139px;
-  background: url(/src/resources/images/main/coin_03.png) repeat-x left top;
+  background: url(src/resources/images/main/coin_03.png) repeat-x left top;
 }
 
 .section_play {
   position: relative;
-  background: url(/src/resources/images/main/bg_section_first.jpg) no-repeat center -80px;
+  background: url(src/resources/images/main/bg_section_first.jpg) no-repeat center -80px;
   background-size: auto 100%;
 }
 .section_play .content_wrapper {
@@ -2020,27 +2020,27 @@ table {
 }
 
 .section_slots {
-  background: url(/src/resources/images/main/bg_section_repeat01.jpg) repeat-x center top;
+  background: url(src/resources/images/main/bg_section_repeat01.jpg) repeat-x center top;
 }
 
 .section_decks {
-  background: url(/src/resources/images/main/bg_section_repeat02.jpg) repeat-x center top;
+  background: url(src/resources/images/main/bg_section_repeat02.jpg) repeat-x center top;
 }
 
 .section_earn {
-  background: url(/src/resources/images/main/bg_section_repeat03.jpg) repeat-x center top;
+  background: url(src/resources/images/main/bg_section_repeat03.jpg) repeat-x center top;
 }
 
 .section_last {
   height: 1100px;
   margin-bottom: -240px;
-  background: url(/src/resources/images/main/bg_section_last.jpg) no-repeat center top;
+  background: url(src/resources/images/main/bg_section_last.jpg) no-repeat center top;
   background-size: cover;
 }
 .section_last .content_wrapper {
   height: 100%;
   padding-bottom: 48px;
-  background: url(/src/resources/images/main/bg_section_last_spin.png) no-repeat center 105px;
+  background: url(src/resources/images/main/bg_section_last_spin.png) no-repeat center 105px;
 }
 .section_last .section_title {
   text-align: center;
