@@ -1,0 +1,159 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: #e0e0e0;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  max-width: 779px;
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 779px;
+  margin: 0 auto;
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
+}
+
+.container_sub {
+  flex-grow: 1;
+  padding: 0 0 $m_top*2;
+  border-top: 0;
+}
+
+.header_top {
+  background-color: #f1f1f1;
+
+  .content_wrapper {
+    height: 60px;
+  }
+}
+
+.header_logo {
+  img {
+    width: 182px;
+  }
+}
+
+.footer_logo {
+  img {
+    width: 182px;
+  }
+}
+
+.header_util {
+  display: none
+}
+
+.footer {
+  .content_wrapper {
+    display: block;
+    padding-top: $m_top*2;
+    padding-bottom: $m_top*2;
+  }
+
+}
+
+.footer_menu {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 12px;
+
+  a {
+    padding: 5px 1em;
+
+    &:not(:first-of-type) {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -1px;
+        height: 1em;
+        margin-top: -0.5em;
+        border-left: 1px solid #d8d8d8;
+      }
+    }
+  }
+}
+
+.copyright {
+  font-size: 11px;
+}
+
+@media screen and (max-width: 379px) {
+  .footer_menu a:last-of-type {
+    display: block;
+    padding-left: 0;
+
+    &::before {
+      content: none
+    }
+  }
+}
+
+.header_sub {
+  display: block;
+  margin: 0 $m_sides*-1 $m_top;
+  border-bottom-color: #e8e8e8;
+}
+
+.sub_title {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  padding: 0 $m_sides;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 2rem;
+}
+
+.line_pageTit {
+  display: none;
+}
+
+.sub_breadcrumbs {
+  justify-content: flex-end;
+  padding: 12px $m_sides;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 12px;
+
+  .item {
+    &:not(:last-child) {
+      padding-right: 26px;
+
+      &::after {
+        top: 4px;
+        right: 10px;
+        width: 6px;
+        height: 6px
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

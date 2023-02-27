@@ -1,0 +1,155 @@
+.signup_step {
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #efefef;
+  border-bottom: 2px solid #222;
+  margin-bottom: -2px;
+  padding: 30px 0;
+
+  /* passed */
+  .item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin: 0 30px;
+    border-radius: 50%;
+    border: 3px solid;
+    color: $c_secondary;
+    font-size: 1.125rem;
+    font-weight: 500;
+
+    &:not(:first-of-type) {
+      margin-left: 40px;
+
+      /* next arr */
+      &::before {
+        content: '';
+        position: absolute;
+        border-top: 3px solid #d9d9d9;
+        border-right: 3px solid #d9d9d9;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: -40px;
+        top: 50%;
+        margin: -4px 0 0 -5px;
+        display: block;
+        width: 12px;
+        height: 12px
+      }
+    }
+
+    /* passed bg */
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      background: rgba(0,132,255,0.7) url(src/resources/images/icon/ico_check.png) no-repeat center center;
+    }
+  }
+
+  /* current */
+  .current {
+    &::after {
+      content: none;
+    }
+
+    /* after */
+    & ~ .item {
+      border: 0;
+      background-color: #f2f2f2;
+      color: #a6a6a6;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.section_term {
+  .section_tit {
+    margin-top: 2em;
+    margin-bottom: 0.6em;
+    font-size: 1.5rem;
+  }
+}
+
+.box_term {
+  max-height: 220px;
+  overflow-y: auto;
+  padding: 1.75rem;
+  border: 1px solid #ebebeb;
+  background-color: #fafafa;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.4em;
+
+  h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-size: 1rem;
+    color: #222;
+    font-weight: 500;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+.term_chk {
+  padding: 3rem;
+  border-bottom: 1px solid #cbcbcb;
+  text-align: center;
+
+  .chk_custom {
+    color: #222;
+    font-size: 17px;
+
+    .checkbox {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+
+      &::after {
+        display: block;
+        width: 12px;
+        height: 7px;
+        margin-left: -6px;
+        border-bottom-width: 3px;
+        border-left-width: 3px;
+        color: #ececec;
+      }
+    }
+  }
+}
+
+.signup_complete {
+  padding: 125px 0;
+  border-bottom: 1px solid #cbcbcb;
+  text-align: center;
+
+  .tit {
+    font-size: 2.625rem;
+    letter-spacing: -1px;
+    font-weight: 500;
+
+    strong {
+      font-weight: 500;
+      color: $c_secondary;
+    }
+  }
+
+  .txt {
+    margin-top: 1.5em;
+    line-height: 1.4;
+    color: #555;
+  }
+}
