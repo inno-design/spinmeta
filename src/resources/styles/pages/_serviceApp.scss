@@ -1,0 +1,223 @@
+.link_back {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1.2em;
+  font-size: 30px;
+  font-weight: 700;
+
+  .ico {
+    width: 28px;
+    margin-right: 15px;
+    margin-top: 5px;
+  }
+}
+
+/* 상단 대시보드 */
+.app_dashboard {
+  display: flex;
+
+  .list_info {
+    & > li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 3em;
+
+      &:not(:first-of-type) {
+        border-top: 1px dotted #d6d6d6;
+      }
+    }
+
+    .label {
+      padding-right: 15px;
+      color: #7e7e7e;
+      white-space: nowrap;
+    }
+
+    .value {
+      font-weight: 500;
+    }
+
+    a {
+      text-decoration: underline;
+      color: $c_secondary;
+    }
+  }
+}
+
+.app_panel_container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+
+  &:not(:first-child) {
+    margin-left: 15px;
+  }
+
+  &:not(.summary) {
+    flex-grow: 1;
+    width: 65%;
+
+    .panel_comm {
+      width: calc(50% - 10px);
+    }
+
+    .titlebar {
+      padding-left: 20px;
+    }
+  }
+
+  &.summary {
+    width: 35%;
+
+    .panel_comm {
+      &.stop {
+        border-color: #ff6142;
+        .titlebar { background-color: #ff6142; }
+      }
+      &.start {
+        border-color: #5189fa;
+        .titlebar { background-color: #5189fa; }
+      }
+    }
+
+    .titlebar {
+      color: #fff;
+      padding-left: 25px;
+      font-size: 16px;
+      border-bottom: 0;
+
+      .title {
+        position: relative;
+        padding-left: 22px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 14px;
+          height: 14px;
+          margin-top: -6px;
+          border-radius: 50%;
+          border: 4px solid currentColor;
+        }
+      }
+    }
+  }
+
+  .line_section {
+    margin: 1.5rem 0;
+    border-color: #dcdcdc;
+  }
+
+  .app_summary {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 26px;
+
+    .service_app_pop {
+      top: 38px;
+      right: -15px;
+    }
+  }
+
+  .app_name {
+    position: relative;
+    padding-bottom: 12px;
+
+    .name {
+      margin-bottom: 18px;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .btn_menu {
+      position: absolute;
+      top: -8px;
+      right: -22px;
+    }
+
+    .txt {
+      font-size: 15px;
+      line-height: 1.5em;
+      color: #444;
+    }
+  }
+
+  .app_data {
+    display: flex;
+    padding: 26px;
+  }
+
+  .value_container {
+    margin-right: auto;
+
+    .value {
+      font-size: 64px;
+      font-weight: bold
+    }
+
+    .unit {
+      padding-left: 5px;
+      font-size: 40px;
+    }
+
+    .max {
+      padding-left: 15px;
+      font-size: 17px;
+      color: #959595;
+      white-space: nowrap;
+    }
+
+    .input_value {
+      width: 110px;
+      height: 77px;
+      border: 1px solid #cdcdcd;
+      border-radius: 4px;
+      text-align: center;
+      font-size: 64px;
+      font-weight: 700;
+      color: #7e7e7e;
+    }
+  }
+
+  .value_controller {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .btn_icon {
+      width: 38px;
+      height: 36px;
+      border-radius: 4px;
+      background-color: #e5f2ff;
+
+      &:hover {
+        background-color: #c4e3ff;
+      }
+      &:not(:first-of-type) {
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+/* 하단 상세 table */
+.app_board {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+
+  .panel_comm {
+    flex-grow: 1;
+    width: calc(100% / 3 - 10px);
+
+    &.expand {
+      order: -1;
+      width: calc(100% - 10px);
+    }
+  }
+}

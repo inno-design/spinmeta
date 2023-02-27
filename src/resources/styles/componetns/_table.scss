@@ -1,0 +1,281 @@
+.table_wrapper {
+  height: 100%;
+
+  &.scrollable {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 231px;
+
+    table thead th {
+      position: sticky;
+      top:0;
+    }
+  }
+}
+
+.list_wrapper {
+  height: 100%;
+
+  &.scrollable {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 210px;
+  }
+}
+
+.app_board .table_wrapper { min-height: 231px; }
+
+.app_board .expand .table_wrapper { max-height: 421px; }
+
+.table_panel {
+  width: 100%;
+  border-collapse: separate;
+  box-shadow: 0 1px 0 0 #f4f4f4;
+
+  thead th {
+    height: 42px;
+    padding: 0 15px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #fff;
+  }
+  tbody {
+    td {
+      height: 38px;
+      padding: 0 15px;
+      border-bottom: 1px solid #f4f4f4;
+      font-size: 0.875rem;;
+      color: #555;
+    }
+    tr:last-child td {
+      border-bottom: 0;
+    }
+  }
+  a {
+    text-decoration: underline;
+    color: $c_secondary;
+  }
+
+  .state {
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      margin-top: -3px;
+      border-radius: 50%;
+      background-color: #2dbd1e;
+    }
+
+    &.run::before { background-color: #2dbd1e; }
+    &.stop::before { background-color: #b3b3b3; }
+    &.err::before { background-color: #ff6142; }
+  }
+}
+
+
+.table_list {
+  width: 100%;
+  border-top: 2px solid #222;
+  border-bottom: 1px solid #cbcbcb;
+
+  thead th {
+    height: 3.750rem;
+    padding: 0 1.875rem;
+    border-bottom: 1px solid #222;
+    font-size: 1.125rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+  tbody td {
+    height: 3.750rem;
+    padding: 0 1.875rem;
+    border-bottom: 1px solid #ededed;
+    vertical-align: middle;
+
+    button, a, i {
+      vertical-align: middle;
+    }
+
+    a {
+      font-weight: 500;
+      transition: color .2s;
+      &:hover { color: $c_secondary; }
+    }
+
+    .title {
+      font-weight: 500;
+    }
+  }
+  tbody tr:last-of-type td {
+    border-bottom: 0;
+  }
+}
+
+.td_pd0 {
+  width: 50px;
+  padding: 0 !important;
+}
+
+.td_alc {
+  text-align: center !important;
+  padding: 0 !important;
+}
+
+.td_num {
+  font-size: 1.125rem;
+  color: #333;
+}
+
+.td_date {
+  font-size: 0.938em;
+  color: #666;
+}
+
+.td_c1 { color: #ff6142; }
+.td_c2 { color: #5189fa; }
+.td_c3 { color: #2dbd1e; }
+
+.user_table {
+  flex: 1;
+
+  .table_data {
+    min-height: 100%;
+
+    th {
+      width: 20%;
+    }
+  }
+}
+
+.table_data,
+.table_write {
+  table-layout: fixed;
+  width: 100%;
+  border-top: 2px solid #222;
+  border-bottom: 1px solid #cbcbcb;
+
+  th, td {
+    height: 3.75rem;
+    padding: 0 25px;
+    font-size: 1.125rem;
+  }
+
+  th {
+    width: 15%;
+    text-align: left;
+    font-weight: 400;
+  }
+
+  tr:not(:first-of-type) {
+    th, td { border-top: 1px solid #ededed; }
+  }
+
+  .msg_sm {
+    font-size: 12px;
+    color: #a2a2a2;
+
+    &::before {
+      content: '* ';
+    }
+  }
+}
+
+.table_data {
+  td {
+    font-weight: 700;
+  }
+}
+
+.table_write {
+  th {
+    font-size: 1rem;
+  }
+
+  td {
+    padding: 6px 0;
+  }
+
+  .form_textfield,
+  .custom-select,
+  .form_textarea {
+    border-color: #ebebeb;
+    background-color: #f7f7f7;
+    font-size: 1rem;
+  }
+
+  .form_textfield,
+  .custom-select {
+    height: 3rem;
+  }
+
+  .form_textfield,
+  .form_textarea,
+  .select-items div,
+  .select-selected {
+    padding-left: 1rem;
+  }
+
+  .form_textarea {
+    height: 15rem;
+  }
+}
+
+
+.table_data,
+.table_summary {
+  th {
+    background-color: #f9f9f9;
+  }
+}
+
+.table_summary {
+  table-layout: fixed;
+  width: 100%;
+  border: 1px solid #dedede;
+
+  th, td {
+    height: 3.250rem;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+
+  th {
+    width: 180px;
+    text-align: left;
+    font-weight: 400;
+  }
+}
+
+.tdcont_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .btn_comm {
+    margin-right: -25px
+  }
+}
+
+.tdpw_container {
+  display: flex;
+  align-items: center;
+
+  .form_textfield {
+    width: 150px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .chk_custom {
+    margin: 0 20px 0 10px;
+  }
+}
