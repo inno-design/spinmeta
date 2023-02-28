@@ -1,5 +1,7 @@
 html {
+  height: 100%;
   font-size: 15px;
+  overflow-y: scroll;
 }
 
 body {
@@ -21,13 +23,13 @@ table {
 
 .font_title {
   font-family: Montserrat, sans-serif !important;
-  font-weight: 900 !important;
+  font-weight: 800 !important;
 }
 
 .wrap {
   position: relative;
+  height: 100%;
   min-width: 1260px;
-  min-height: 100%;
   margin: 0 auto;
 }
 
@@ -71,6 +73,7 @@ table {
     align-items: center;
     padding: 10px;
     transition: color .2s;
+    white-space: nowrap;
 
     &:not(:first-child) {
       margin-left: 51px;
@@ -118,6 +121,7 @@ table {
   display: flex;
   margin-left: auto;
   font-weight: 500;
+  white-space: nowrap;
 
   .btn {
     position: relative;
@@ -260,38 +264,6 @@ table {
 .side_position {
   margin-left: 15px;
 
-  li {
-    &:not(:first-of-type) {
-      position: relative;
-      padding-top: 62px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 9px;
-        height: 62px;
-        border-left: 1px solid #d505fd;
-        opacity: 1;
-      }
-    }
-
-    &.current ~ li {
-      &::before {
-        border-color: #fff;
-        opacity: 0.1;
-      }
-      .item {
-        opacity: 0.2;
-        color: #fff;
-
-        .bullet {
-          opacity: 0.5;
-        }
-      }
-    }
-  }
-
   .item {
     position: relative;
     display: flex;
@@ -299,17 +271,55 @@ table {
     height: 27px;
     padding-left: 28px;
     color: #d505fd;
-    opacity: 1;
-    transition: opacity .2s, color .2s;
+    transition: color .2s;
 
-    &:hover {
-      opacity: 1;
-      color: #d505fd;
+    &:not(:first-of-type) {
+      position: relative;
+      margin-top: 62px;
 
-      .bullet {
-        opacity: 0.5;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -62px;
+        left: 9px;
+        height: 62px;
+        border-left: 1px solid #d505fd;
+        transition: opacity .2s, border-left-color .2s;
       }
     }
+
+    &.current ~ .item {
+      color: #fff;
+
+      &::before {
+        border-color: #fff;
+        opacity: 0.1;
+      }
+
+      .label {
+        opacity: 0.3;
+      }
+
+      .bullet {
+        opacity: 0.1;
+      }
+
+      &:hover {
+        color: #d505fd;
+
+        &::before {
+        }
+
+        .label,
+        .bullet {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .label {
+    transition: opacity .2s;
   }
 
   .bullet {
@@ -342,7 +352,13 @@ table {
 }
 
 
-
+.footer {
+  .content_wrapper {
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 
 
 .container_sub,

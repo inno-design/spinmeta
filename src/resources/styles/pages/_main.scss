@@ -5,16 +5,13 @@
     position: relative;
     display: flex;
     align-items: center;
-    max-width: 1388px;
+    max-width: 1380px;
     height: 1000px;
-    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 50px;
     margin-left: auto;
+    margin-right: auto
   }
-}
-
-.section_img,
-.section_cont {
-  width: 50%
 }
 
 .section_play,
@@ -139,12 +136,43 @@
   }
 }
 
+
+.section_slots,
+.section_decks,
+.section_earn {
+  .section_img {
+    //justify-content: flex-end;
+  }
+  .section_cont {
+    //margin-left: 25px;
+  }
+}
+
 .section_cities,
 .section_piggy {
   .content_wrapper {
     flex-direction: row-reverse;
   }
+
+  .section_img {
+
+  }
+
+  .section_cont {
+    //max-width: 626px
+  }
 }
+
+.section_img,
+.section_cont {
+  width: 50%
+}
+
+.section_img {
+  display: flex;
+  align-items: center;
+}
+
 
 .section_cont {
   .section_desc {
