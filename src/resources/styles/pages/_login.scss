@@ -37,7 +37,7 @@
   align-items: center;
   margin-top: 60px;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
   border-radius: 12px;
   background-color: #eceef3;
 
@@ -53,12 +53,48 @@
     display: block;
     width: 340px;
     height: 60px;
+    padding: 0 29px;
     border: 1px solid #e0e3eb;
     border-radius: 4px;
     background-color: #fff;
+    font-weight: 600;
 
     &:not(:first-of-type){
       margin-top: 14px;
+    }
+
+    span {
+      position: relative;
+      display: block;
+      height: 20px;
+      margin-left: 44px;
+      padding-left: 18px;
+      border-left: 1px solid #d9d9db;
+      text-align: left;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -44px;
+        width: 44px;
+        height: 30px;
+        margin-top: -15px;
+      }
+    }
+
+    &.btn_apple span::before {
+      background: url(src/resources/images/icon/ico_apple.svg) no-repeat 2px 2px;
+    }
+
+    &.btn_facebook span::before {
+      background: url(src/resources/images/icon/ico_facebook.svg) no-repeat left center;
+      background-size: 24px;
+    }
+
+    &.btn_google span::before {
+      background: url(src/resources/images/icon/ico_google.svg) no-repeat left center;
+      background-size: 23px;
     }
   }
 }

@@ -1,0 +1,84 @@
+.container_sub {
+  background-color: #eceef3;
+}
+
+.mypage_profile {
+  background-color: #fff;
+
+  .content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.mypage_detail {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+}
+
+.profile_photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile_name {
+  font-size: 36px;
+  margin-top: 0.4em;
+}
+
+.profile_id {
+  margin-top: 0.4em;
+  font-weight: 600;
+  span {
+    padding-right: 5px;
+    color: #5b5f67;
+    font-size: 12px;
+  }
+}
+
+.profile_btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.2rem;
+}
+
+.btn_profile {
+  width: 298px;
+  height: 60px;
+  margin: 0 11px;
+  border-radius: 3px;
+  background-color: #eceef3;
+  font-weight: 600;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .wallet {
+    padding-left: 39px;
+    background: url(src/resources/images/icon/ico_wallet.png) no-repeat left center;
+    background-size: 28px;
+  }
+
+  .cash {
+    padding-left: 37px;
+    background: url(src/resources/images/icon/ico_cash.svg) no-repeat left 45%;
+  }
+}
