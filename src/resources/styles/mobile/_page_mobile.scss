@@ -1,7 +1,15 @@
 @media screen and (max-width: 767px) {
+  .container_login {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
   .login_title {
     .font_title {
-      font-size: 2.5rem;
+      font-size: 2rem;
+    }
+    .subtit {
+      font-size: 0.857rem
     }
   }
 
