@@ -80,4 +80,28 @@
       margin-top: 3px;
     }
   }
+
+  .footer_nav {
+    margin-left: -5px;
+  }
+
+  .footer_nav {
+    display: flex;
+
+    a {
+      padding: 5px;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &:not(:first-child) {
+        margin-left: 10px;
+
+        &::before {
+          left: -10px;
+        }
+      }
+    }
+  }
 }

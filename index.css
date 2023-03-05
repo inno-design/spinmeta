@@ -1132,6 +1132,20 @@ table {
   .btn_menu .ico::before {
     margin-top: -5px; }
   .btn_menu .ico::after {
-    margin-top: 3px; } }
+    margin-top: 3px; }
+
+  .footer_nav {
+    margin-left: -5px; }
+
+  .footer_nav {
+    display: flex; }
+    .footer_nav a {
+      padding: 5px; }
+      .footer_nav a:not(:last-child) {
+        margin-right: 10px; }
+      .footer_nav a:not(:first-child) {
+        margin-left: 10px; }
+        .footer_nav a:not(:first-child)::before {
+          left: -10px; } }
 
 /*# sourceMappingURL=index.css.map */
