@@ -30,14 +30,3 @@
 .footer_copy {
   padding: 10px 0;
 }
-
-@media screen and (max-width: 1279px) {
-  .footer {
-    padding-top: 5vw;
-    padding-bottom: 4vw;
-  }
-
-  .footer_content {
-    flex-direction: column-reverse;
-  }
-}

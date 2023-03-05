@@ -1,0 +1,83 @@
+@media screen and (max-width: 1279px) {
+  .btn_menu {
+    display: block;
+  }
+  .header_nav {
+    display: none;
+  }
+  .btn_view {
+    display: none;
+  }
+  .btn_util:not(:first-child)::before {
+    content: none;
+  }
+  .content_wrapper {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .footer {
+    padding-top: 5vw;
+    padding-bottom: 4vw;
+
+    .content_wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  .footer_content {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+
+  .footer_nav {
+    margin-left: -10px;
+  }
+
+  .footer_copy {
+    font-size: 1.25rem;
+  }
+
+  .side_sns {
+    .btn_sns {
+      width: 35px;
+      height: 40px;
+    }
+
+    .discord {
+      background-size: 17px;
+    }
+
+    .twitter {
+      background-size: 17px;
+    }
+
+    .medium {
+      background-size: 20px;
+    }
+  }
+
+  .side_nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn_menu {
+    .ico,
+    .ico::before,
+    .ico::after {
+      height: 1px;
+    }
+
+    .ico::before {
+      margin-top: -5px;
+    }
+
+    .ico::after {
+      margin-top: 3px;
+    }
+  }
+}
