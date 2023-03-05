@@ -74,6 +74,11 @@
     font-size: 14px;
   }
 
+  .container_sub,
+  .container_login {
+    min-height: calc(100vh - 160px);
+  }
+
   .btn_menu {
     .ico,
     .ico::before,
@@ -82,23 +87,23 @@
     }
 
     .ico::before {
-      margin-top: -5px;
+      margin-top: -4px;
     }
 
     .ico::after {
-      margin-top: 3px;
+      margin-top: 4px;
     }
   }
 
   .footer_copy {
-    padding: 6px 0;
-    font-size: 0.857rem
+    padding: 5px 0;
+    @include font_s;
   }
 
   .footer_nav {
     display: flex;
     margin-left: -5px;
-    @include font_s;
+    @include font_ss;
 
     a {
       padding: 5px;

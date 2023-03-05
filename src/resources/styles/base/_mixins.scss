@@ -29,6 +29,10 @@
   z-index: -1;
 }
 
+@mixin font_ss {
+  font-size: 0.643rem;
+  letter-spacing: 0;
+}
 @mixin font_s {
   font-size: 0.714rem;
   letter-spacing: 0;

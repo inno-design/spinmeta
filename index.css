@@ -943,7 +943,6 @@ table {
 .container_login {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding-top: 5rem;
   padding-bottom: 5rem; }
 
@@ -1135,23 +1134,28 @@ table {
   html {
     font-size: 14px; }
 
+  .container_sub,
+  .container_login {
+    min-height: calc(100vh - 160px); }
+
   .btn_menu .ico,
   .btn_menu .ico::before,
   .btn_menu .ico::after {
     height: 1px; }
   .btn_menu .ico::before {
-    margin-top: -5px; }
+    margin-top: -4px; }
   .btn_menu .ico::after {
-    margin-top: 3px; }
+    margin-top: 4px; }
 
   .footer_copy {
-    padding: 6px 0;
-    font-size: 0.857rem; }
+    padding: 5px 0;
+    font-size: 0.714rem;
+    letter-spacing: 0; }
 
   .footer_nav {
     display: flex;
     margin-left: -5px;
-    font-size: 0.714rem;
+    font-size: 0.643rem;
     letter-spacing: 0; }
     .footer_nav a {
       padding: 5px; }
