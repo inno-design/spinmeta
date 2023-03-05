@@ -473,14 +473,14 @@ table {
 .header {
   z-index: 1001;
   position: relative;
-  height: 9vw;
+  height: 13vw;
   max-height: 80px; }
   .header .content_wrapper {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 9vw;
+    height: 13vw;
     max-height: 80px;
     display: flex;
     align-items: center;
@@ -492,7 +492,7 @@ table {
   height: 100%; }
   .header_logo img {
     display: block;
-    height: 30%; }
+    height: 25%; }
 
 .header_nav,
 .footer_nav {
@@ -548,7 +548,7 @@ table {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 5vw;
+  height: 8vw;
   max-height: 48px;
   min-height: 30px;
   border-radius: 24px;
@@ -556,7 +556,7 @@ table {
 
 .btn_user,
 .btn_menu {
-  width: 5vw;
+  width: 8vw;
   max-width: 48px;
   min-width: 30px; }
 
@@ -957,10 +957,10 @@ table {
 .login_title {
   text-align: center; }
   .login_title .font_title {
-    font-size: 52px;
+    font-size: 3.25rem;
     text-transform: uppercase; }
   .login_title .subtit {
-    margin-top: 15px;
+    margin-top: 0.938rem;
     font-weight: 800; }
 
 .login_box {
@@ -968,20 +968,21 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 60px;
+  margin-top: 3.750rem;
   padding-top: 5rem;
   padding-bottom: 6rem;
   border-radius: 12px;
   background-color: #eceef3; }
   .login_box .font_title {
-    font-size: 36px; }
+    font-size: 2.25rem; }
 
 .login_sns {
-  margin-top: 32px; }
+  margin-top: 2rem; }
   .login_sns button {
     display: block;
-    width: 340px;
-    height: 60px;
+    width: 100%;
+    max-width: 340px;
+    height: 3.7503em;
     padding: 0 29px;
     border: 1px solid #e0e3eb;
     border-radius: 4px;
@@ -1078,6 +1079,10 @@ table {
     background: url(src/resources/images/icon/ico_cash.svg) no-repeat left 45%; }
 
 @media screen and (max-width: 1279px) {
+  .content_wrapper {
+    padding-left: 3vw;
+    padding-right: 3vw; }
+
   .btn_menu {
     display: block; }
 
@@ -1089,10 +1094,6 @@ table {
 
   .btn_util:not(:first-child)::before {
     content: none; }
-
-  .content_wrapper {
-    padding-left: 2vw;
-    padding-right: 2vw; }
 
   .footer {
     padding-top: 5vw;
@@ -1109,9 +1110,6 @@ table {
   .footer_nav {
     margin-left: -10px; }
 
-  .footer_copy {
-    font-size: 1.25rem; }
-
   .side_sns .btn_sns {
     width: 35px;
     height: 40px; }
@@ -1122,9 +1120,15 @@ table {
   .side_sns .medium {
     background-size: 20px; }
 
+  .footer .side_sns li {
+    margin-left: 6px; }
+
   .side_nav {
     display: none; } }
 @media screen and (max-width: 767px) {
+  html {
+    font-size: 14px; }
+
   .btn_menu .ico,
   .btn_menu .ico::before,
   .btn_menu .ico::after {
@@ -1147,5 +1151,12 @@ table {
         margin-left: 10px; }
         .footer_nav a:not(:first-child)::before {
           left: -10px; } }
+@media screen and (max-width: 767px) {
+  .login_title .font_title {
+    font-size: 2.5rem; }
+
+  .login_box {
+    padding-top: 3rem;
+    padding-bottom: 4rem; } }
 
 /*# sourceMappingURL=index.css.map */
