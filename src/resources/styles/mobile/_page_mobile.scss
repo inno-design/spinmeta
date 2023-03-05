@@ -9,6 +9,7 @@
       font-size: 2rem;
     }
     .subtit {
+      margin-top: 8px;
       @include font_s;
     }
   }
@@ -16,9 +17,10 @@
   .login_box {
     padding-top: 2.5rem;
     padding-bottom: 3rem;
+    margin-top: 3rem;
 
     .font_title {
-      font-size: 1.714em;
+      font-size: 1.5rem;
     }
   }
 
