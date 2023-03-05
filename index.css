@@ -785,6 +785,8 @@ table {
     padding-right: 50px;
     margin-left: auto;
     margin-right: auto; }
+  .container_main img {
+    max-width: 100%; }
 
 .section_play,
 .section_last {
@@ -1115,18 +1117,8 @@ table {
     margin-left: -10px;
     font-size: 0.857rem; }
 
-  .side_sns .btn_sns {
-    width: 35px;
-    height: 40px; }
-  .side_sns .discord {
-    background-size: 17px; }
-  .side_sns .twitter {
-    background-size: 17px; }
-  .side_sns .medium {
-    background-size: 20px; }
-
-  .footer .side_sns li {
-    margin-left: 6px; }
+  .footer_copy {
+    font-size: 0.929rem; }
 
   .side_nav {
     display: none; } }
@@ -1146,6 +1138,19 @@ table {
     margin-top: -4px; }
   .btn_menu .ico::after {
     margin-top: 4px; }
+
+  .side_sns .btn_sns {
+    width: 35px;
+    height: 40px; }
+  .side_sns .discord {
+    background-size: 17px; }
+  .side_sns .twitter {
+    background-size: 17px; }
+  .side_sns .medium {
+    background-size: 20px; }
+
+  .footer .side_sns li {
+    margin-left: 6px; }
 
   .footer_copy {
     padding: 5px 0;
