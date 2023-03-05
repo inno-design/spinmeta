@@ -1139,11 +1139,13 @@ table {
   .btn_menu .ico::after {
     margin-top: 3px; }
 
-  .footer_nav {
-    margin-left: -5px; }
+  .footer_copy {
+    font-size: 0.857rem; }
 
   .footer_nav {
-    display: flex; }
+    display: flex;
+    margin-left: -5px;
+    font-size: 0.714rem; }
     .footer_nav a {
       padding: 5px; }
       .footer_nav a:not(:last-child) {
