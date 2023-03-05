@@ -22,18 +22,14 @@
   clip: rect(1px 1px 1px 1px);
 }
 
-@mixin ir_ico {
-  display: block;
-  max-width: 32px;
-  max-height: 32px;
-  margin: auto;
-  color: transparent;
-  overflow: hidden;
-}
-
 @mixin ir_wa {
   display: block;
   overflow: hidden;
   position: relative;
   z-index: -1;
+}
+
+@mixin font_s {
+  font-size: 0.714rem;
+  letter-spacing: 0;
 }

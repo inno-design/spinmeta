@@ -91,13 +91,14 @@
   }
 
   .footer_copy {
+    padding: 6px 0;
     font-size: 0.857rem
   }
 
   .footer_nav {
     display: flex;
     margin-left: -5px;
-    font-size: 0.714rem;
+    @include font_s;
 
     a {
       padding: 5px;

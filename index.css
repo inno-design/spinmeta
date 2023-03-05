@@ -977,7 +977,12 @@ table {
     font-size: 2.25rem; }
 
 .login_sns {
-  margin-top: 2rem; }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0 2rem; }
   .login_sns button {
     display: block;
     width: 100%;
@@ -1140,12 +1145,14 @@ table {
     margin-top: 3px; }
 
   .footer_copy {
+    padding: 6px 0;
     font-size: 0.857rem; }
 
   .footer_nav {
     display: flex;
     margin-left: -5px;
-    font-size: 0.714rem; }
+    font-size: 0.714rem;
+    letter-spacing: 0; }
     .footer_nav a {
       padding: 5px; }
       .footer_nav a:not(:last-child) {
@@ -1162,10 +1169,31 @@ table {
   .login_title .font_title {
     font-size: 2rem; }
   .login_title .subtit {
-    font-size: 0.714rem; }
+    font-size: 0.714rem;
+    letter-spacing: 0; }
 
   .login_box {
-    padding-top: 3rem;
-    padding-bottom: 4rem; } }
+    padding-top: 2.5rem;
+    padding-bottom: 3rem; }
+    .login_box .font_title {
+      font-size: 1.714em; }
+
+  .login_sns {
+    margin-top: 1.5rem; }
+    .login_sns button {
+      padding: 0 1.4rem; }
+      .login_sns button:not(:first-of-type) {
+        margin-top: 8px; }
+      .login_sns button.btn_apple span::before, .login_sns button.btn_facebook span::before, .login_sns button.btn_google span::before {
+        background-size: 18px; }
+      .login_sns button.btn_apple span::before {
+        background-position: left 3px; }
+      .login_sns button span {
+        height: 1rem;
+        line-height: 1rem;
+        margin-left: 36px; }
+        .login_sns button span::before {
+          left: -36px;
+          width: 36px; } }
 
 /*# sourceMappingURL=index.css.map */

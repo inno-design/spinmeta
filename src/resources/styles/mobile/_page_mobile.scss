@@ -9,12 +9,49 @@
       font-size: 2rem;
     }
     .subtit {
-      font-size: 0.714rem
+      @include font_s;
     }
   }
 
   .login_box {
-    padding-top: 3rem;
-    padding-bottom: 4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+
+    .font_title {
+      font-size: 1.714em;
+    }
+  }
+
+  .login_sns {
+    margin-top: 1.5rem;
+
+    button {
+      padding: 0 1.4rem;
+
+      &:not(:first-of-type) {
+        margin-top: 8px;
+      }
+
+      &.btn_apple span::before,
+      &.btn_facebook span::before,
+      &.btn_google span::before {
+        background-size: 18px;
+      }
+
+      &.btn_apple span::before {
+        background-position: left 3px;
+      }
+
+      span {
+        height: 1rem;
+        line-height: 1rem;
+        margin-left: 36px;
+
+        &::before {
+          left: -36px;
+          width: 36px;
+        }
+      }
+    }
   }
 }
