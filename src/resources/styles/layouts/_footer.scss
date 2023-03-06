@@ -10,7 +10,10 @@
 
     li {
       margin-top: 0 !important;
-      margin-left: 16px;
+
+      &:not(:first-of-type) {
+        margin-left: 16px;
+      }
     }
   }
 

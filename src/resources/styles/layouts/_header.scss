@@ -165,7 +165,8 @@
     display: block;
     width: 38%;
     height: 2px;
-    background-color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
     margin: 0 auto;
 
     &::before,

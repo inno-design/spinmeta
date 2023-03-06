@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="모양_604" data-name="모양 604" class="cls-1" d="M1564,651a6,6,0,0,1-6-6h2l-3-3-3,3h2a8,8,0,0,0,14.13,5.133l-1.42-1.424A5.99,5.99,0,0,1,1564,651Zm8-6a8,8,0,0,0-14.13-5.133l1.42,1.423A6,6,0,0,1,1570,645h-2l3,3,3-3h-2Z" transform="translate(-1554 -637)"/>
+</svg>

@@ -34,15 +34,16 @@
       </nav>
       <div class="header_util">
         <a href="#" class="btn_util btn_view">View on OpenSea<span class="ico"><img src="../../src/resources/images/icon/ico_opensea.svg" alt="OpenSea"></span></a>
-        <a href="../../src/page/login.html" class="btn_util btn_user"><span class="ico"><img src="../../src/resources/images/icon/ico_user.svg" alt="user"></span></a>
+        <a href="../../src/page/login.html" class="btn_util btn_user"><span class="ico"><img src="../../src/resources/images/icon/ico_user.png" alt="user"></span></a>
       </div>
+      <button type="button" class="btn_menu"><span class="ico"><span>Menu</span></span></button>
     </div>
   </header>
 
   <main class="container_sub">
     <section class="mypage_profile">
       <div class="content_wrapper">
-        <div class="profile_photo"><img src="../resources/images/mypage/img_profile.jpg" alt="photo"></div>
+        <div class="profile_photo"><div class="inner"><img src="../resources/images/mypage/img_profile.jpg" alt="photo"></div></div>
         <div class="profile_name font_title">Richman Casino</div>
         <div class="profile_id"><span class="label">User ID</span>9089642008902</div>
         <div class="profile_btns">
@@ -54,7 +55,45 @@
 
     <section class="mypage_detail">
       <div class="content_wrapper">
+        <div class="dashboard_header">
+          <div class="tab_btns">
+            <button type="button" class="btn_tab">My NFTs</button>
+            <button type="button" class="btn_tab selected">Dashboard</button>
+          </div>
 
+          <div class="dashboard_action">
+            <div class="custom-select">
+              <select id="category" title="All categories">
+                <option value="0">All categories</option>
+                <option value="1">Claim: Claim</option>
+                <option value="2">Pending</option>
+                <option value="3">Claimed</option>
+                <option value="4">Refunded</option>
+              </select>
+            </div>
+
+            <div class="custom-select">
+              <select id="cash" title="Cash-Out">
+                <option value="0">Cash-Out</option>
+                <option value="1">Bronze Box Sold</option>
+                <option value="2">Silver Box Sold</option>
+                <option value="3">Platinum Box Sold</option>
+                <option value="4">Ruby Box Sold</option>
+                <option value="5">Emerald Box Sold</option>
+                <option value="6">Sapphire Box Sold</option>
+                <option value="7">Diamond Box Sold</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn_refresh"><span class="ico">Refresh</span></button>
+          </div>
+        </div>
+
+        <div class="tab_container">
+          <div class="tab_content">
+
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -88,10 +127,9 @@
 
 <!-- custom select -->
 <script src="../../src/resources/js/select.js"></script>
-
-<!-- side nav -->
 <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
-<script src="../../src/resources/js/sideNav.js"></script>
+<!-- mobile nav -->
+<script src="../../src/resources/js/nav.js"></script>
 
 
 </body>

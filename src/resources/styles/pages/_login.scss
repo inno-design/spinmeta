@@ -68,7 +68,8 @@
 
     span {
       position: relative;
-      display: block;
+      display: flex;
+      align-items: center;
       height: 20px;
       margin-left: 44px;
       padding-left: 18px;
