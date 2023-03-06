@@ -1759,8 +1759,8 @@ table {
   }
 
   .custom-select {
-    height: 4.5em;
-    font-size: 2vw;
+    height: 3em;
+    font-size: 3vw;
   }
   .custom-select .select-selected:before,
 .custom-select .select-selected:after {
