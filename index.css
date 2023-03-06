@@ -1646,11 +1646,11 @@ table {
   }
   .point_btns .btn_profile {
     max-width: unset;
-    height: 3.5em;
-    font-size: 2.5vw;
+    height: 3em;
+    font-size: 3.5vw;
   }
   .point_btns .btn_profile .cash {
-    padding-left: 5.5vw;
+    padding-left: 6vw;
     background-size: auto 40%;
   }
 }
@@ -1666,7 +1666,7 @@ table {
   }
   .login_title .subtit {
     margin-top: 1em;
-    font-size: 2vw;
+    font-size: 2.5vw;
     letter-spacing: 0;
   }
 
@@ -1725,8 +1725,11 @@ table {
   }
 
   .profile_id {
-    font-size: 2vw;
+    font-size: 2.5vw;
     letter-spacing: 0;
+  }
+  .profile_id span {
+    font-size: inherit;
   }
 
   .profile_btns {
@@ -1736,24 +1739,24 @@ table {
   .btn_profile {
     width: calc(50% - 10px);
     margin: 0 5px;
-    font-size: 2vw;
+    font-size: 2.5vw;
     letter-spacing: 0;
     white-space: nowrap;
   }
   .btn_profile .wallet {
-    padding-left: 3em;
+    padding-left: 2.5em;
     background-size: auto 45%;
   }
   .btn_profile .cash {
-    padding-left: 3em;
+    padding-left: 2.5em;
     background-size: auto 45%;
   }
 
   .btn_tab {
     width: 32vw;
-    height: 3.2em;
+    height: 3em;
     border-radius: 2em;
-    font-size: 3vw;
+    font-size: 3.5vw;
     letter-spacing: 0;
     white-space: nowrap;
   }
@@ -1761,6 +1764,7 @@ table {
   .custom-select {
     height: 3em;
     font-size: 3vw;
+    letter-spacing: 0;
   }
   .custom-select .select-selected:before,
 .custom-select .select-selected:after {
@@ -1795,7 +1799,7 @@ table {
   }
 
   .point_value .item .label {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   .point_value .item .value {
     font-size: 5vw;
