@@ -1,3 +1,9 @@
+@media screen and (max-width: 1279px) {
+  .point_title {
+    display: none
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .dashboard_header {
     flex-direction: column;
@@ -14,6 +20,40 @@
 
     & > *:not(:first-child) {
       margin-left: 5px;
+    }
+  }
+
+  .point_box {
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.08);
+  }
+
+  .point_value {
+    width: 100%;
+    margin-top: 2%;
+
+    .item {
+      justify-content: flex-end;
+      padding: 0 4%;
+    }
+  }
+
+  .point_btns {
+    width: 100%;
+    max-width: unset;
+    height: auto;
+    margin-top: 4%;
+
+    .btn_profile {
+      max-width: unset;
+      height: 3.5em;
+      font-size: 2.5vw;
+
+      .cash {
+        padding-left: 5.5vw;
+        background-size: auto 40%;
+      }
     }
   }
 }
@@ -129,9 +169,9 @@
   }
 
   .btn_tab {
-    width: 35vw;
-    height: 3em;
-    max-height: 50px;
+    width: 32vw;
+    height: 3.2em;
+    border-radius: 2em;
     font-size: 3vw;
     letter-spacing: 0;
     white-space: nowrap;
@@ -172,5 +212,24 @@
     height: 4.5em;
     font-size: 2vw;
     background-size: 42%;
+  }
+
+  .point_box {
+    margin-top: 4vw;
+  }
+
+  .point_value {
+    .item {
+      .label {
+        font-size: 2vw
+      }
+      .value {
+        font-size: 5vw;
+      }
+
+      &:not(:first-child)::after {
+        height: 90%;
+      }
+    }
   }
 }

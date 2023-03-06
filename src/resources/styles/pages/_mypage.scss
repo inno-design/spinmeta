@@ -78,6 +78,7 @@
   border-radius: 3px;
   background-color: #eceef3;
   font-weight: 600;
+  white-space: nowrap;
 
   span {
     display: inline-flex;
@@ -108,5 +109,94 @@
 
   & > *:not(:first-child) {
     margin-left: 8px;
+  }
+}
+
+.point_box {
+  display: flex;
+  align-items: center;
+  margin-top: 27px;
+  padding: 20px 40px 20px 0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.point_title {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 200px;
+  height: 100px;
+  background: url(src/resources/images/icon/ico_point.png) no-repeat center top;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 60px;
+    border-right: 1px solid #eceef3;
+    transform: translateY(-50%);
+  }
+}
+
+.point_value {
+  flex-grow: 1;
+  display: flex;
+
+  .item {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 0 40px;
+    white-space: nowrap;
+
+    .inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .label {
+      color: #5c5d64;
+      font-weight: 500;
+      letter-spacing: 0;
+      padding-right: 5px;
+    }
+
+    .value {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    &:not(:first-child)::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 60px;
+      border-right: 1px solid #eceef3;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.point_btns {
+  width: 20%;
+  max-width: 250px;
+  height: 80px;
+
+  .btn_profile {
+    width: 100%;
+    height: 100%;
+    max-height: 80px;
+    margin: 0;
   }
 }

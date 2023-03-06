@@ -1359,6 +1359,7 @@ table {
   border-radius: 3px;
   background-color: #eceef3;
   font-weight: 600;
+  white-space: nowrap;
 }
 .btn_profile span {
   display: inline-flex;
@@ -1386,6 +1387,88 @@ table {
 }
 .dashboard_action > *:not(:first-child) {
   margin-left: 8px;
+}
+
+.point_box {
+  display: flex;
+  align-items: center;
+  margin-top: 27px;
+  padding: 20px 40px 20px 0;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.point_title {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 200px;
+  height: 100px;
+  background: url(src/resources/images/icon/ico_point.png) no-repeat center top;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+.point_title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 60px;
+  border-right: 1px solid #eceef3;
+  transform: translateY(-50%);
+}
+
+.point_value {
+  flex-grow: 1;
+  display: flex;
+}
+.point_value .item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 0 40px;
+  white-space: nowrap;
+}
+.point_value .item .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.point_value .item .label {
+  color: #5c5d64;
+  font-weight: 500;
+  letter-spacing: 0;
+  padding-right: 5px;
+}
+.point_value .item .value {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+.point_value .item:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 60px;
+  border-right: 1px solid #eceef3;
+  transform: translateY(-50%);
+}
+
+.point_btns {
+  width: 20%;
+  max-width: 250px;
+  height: 80px;
+}
+.point_btns .btn_profile {
+  width: 100%;
+  height: 100%;
+  max-height: 80px;
+  margin: 0;
 }
 
 @media screen and (max-width: 1279px) {
@@ -1518,6 +1601,11 @@ table {
     justify-content: flex-start;
   }
 }
+@media screen and (max-width: 1279px) {
+  .point_title {
+    display: none;
+  }
+}
 @media screen and (max-width: 1023px) {
   .dashboard_header {
     flex-direction: column;
@@ -1533,6 +1621,37 @@ table {
   }
   .dashboard_action > *:not(:first-child) {
     margin-left: 5px;
+  }
+
+  .point_box {
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .point_value {
+    width: 100%;
+    margin-top: 2%;
+  }
+  .point_value .item {
+    justify-content: flex-end;
+    padding: 0 4%;
+  }
+
+  .point_btns {
+    width: 100%;
+    max-width: unset;
+    height: auto;
+    margin-top: 4%;
+  }
+  .point_btns .btn_profile {
+    max-width: unset;
+    height: 3.5em;
+    font-size: 2.5vw;
+  }
+  .point_btns .btn_profile .cash {
+    padding-left: 5.5vw;
+    background-size: auto 40%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1631,9 +1750,9 @@ table {
   }
 
   .btn_tab {
-    width: 35vw;
-    height: 3em;
-    max-height: 50px;
+    width: 32vw;
+    height: 3.2em;
+    border-radius: 2em;
     font-size: 3vw;
     letter-spacing: 0;
     white-space: nowrap;
@@ -1669,6 +1788,20 @@ table {
     height: 4.5em;
     font-size: 2vw;
     background-size: 42%;
+  }
+
+  .point_box {
+    margin-top: 4vw;
+  }
+
+  .point_value .item .label {
+    font-size: 2vw;
+  }
+  .point_value .item .value {
+    font-size: 5vw;
+  }
+  .point_value .item:not(:first-child)::after {
+    height: 90%;
   }
 }
 
