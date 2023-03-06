@@ -58,6 +58,7 @@
     padding-right: 5px;
     color: #5b5f67;
     font-size: 12px;
+    letter-spacing: 0;
   }
 }
 
@@ -75,7 +76,7 @@
   max-height: 60px;
   margin: 0 11px;
   padding: 0 11px;
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: #eceef3;
   font-weight: 600;
   white-space: nowrap;
@@ -198,5 +199,42 @@
     height: 100%;
     max-height: 80px;
     margin: 0;
+  }
+}
+
+.dashboard_table {
+  margin-top: 40px;
+}
+
+.table_dashboard {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead th {
+    height: 50px;
+    color: #5c5d64;
+    font-weight: 600;
+    background-color: #dee2ed;
+
+    &:first-of-type {
+      border-radius: 4px 0 0 4px
+    }
+
+    &:last-of-type {
+      border-radius: 0 4px 4px 0
+    }
+  }
+
+  tbody td {
+    height: 75px;
+    padding: 0 35px;
+    border-bottom: 1px solid #d6dbe9;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .ico {
+    display: inline-block;
+    width: 42px
   }
 }

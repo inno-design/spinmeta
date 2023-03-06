@@ -1340,6 +1340,7 @@ table {
   padding-right: 5px;
   color: #5b5f67;
   font-size: 12px;
+  letter-spacing: 0;
 }
 
 .profile_btns {
@@ -1356,7 +1357,7 @@ table {
   max-height: 60px;
   margin: 0 11px;
   padding: 0 11px;
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: #eceef3;
   font-weight: 600;
   white-space: nowrap;
@@ -1469,6 +1470,38 @@ table {
   height: 100%;
   max-height: 80px;
   margin: 0;
+}
+
+.dashboard_table {
+  margin-top: 40px;
+}
+
+.table_dashboard {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table_dashboard thead th {
+  height: 50px;
+  color: #5c5d64;
+  font-weight: 600;
+  background-color: #dee2ed;
+}
+.table_dashboard thead th:first-of-type {
+  border-radius: 4px 0 0 4px;
+}
+.table_dashboard thead th:last-of-type {
+  border-radius: 0 4px 4px 0;
+}
+.table_dashboard tbody td {
+  height: 75px;
+  padding: 0 35px;
+  border-bottom: 1px solid #d6dbe9;
+  font-size: 20px;
+  font-weight: 500;
+}
+.table_dashboard .ico {
+  display: inline-block;
+  width: 42px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -1744,11 +1777,11 @@ table {
     white-space: nowrap;
   }
   .btn_profile .wallet {
-    padding-left: 2.5em;
+    padding-left: 2.8em;
     background-size: auto 45%;
   }
   .btn_profile .cash {
-    padding-left: 2.5em;
+    padding-left: 2.8em;
     background-size: auto 45%;
   }
 
@@ -1791,7 +1824,7 @@ table {
     width: 4.5em;
     height: 4.5em;
     font-size: 2vw;
-    background-size: 42%;
+    background-size: 45%;
   }
 
   .point_box {
