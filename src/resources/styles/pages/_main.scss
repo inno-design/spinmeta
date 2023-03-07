@@ -1,6 +1,7 @@
 .container_main {
   min-height: calc(100vh - 80px);
   min-width: 1600px;
+  overflow: hidden;
 
   .content_wrapper {
     position: relative;

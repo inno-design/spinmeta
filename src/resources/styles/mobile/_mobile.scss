@@ -1,13 +1,16 @@
 @media screen and (max-width: 1279px) {
+  .container_sub,
+  .container_login {
+    min-height: unset;
+    flex-grow: 1;
+  }
+
   .content_wrapper {
     padding-left: 3vw;
     padding-right: 3vw;
   }
   .btn_menu {
     display: block;
-  }
-  .header_nav {
-    display: none;
   }
   .btn_view {
     display: none;
@@ -17,8 +20,8 @@
   }
 
   .footer {
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
+    padding-top: 50px;
+    padding-bottom: 70px;
 
     .content_wrapper {
       display: flex;
@@ -33,79 +36,179 @@
   }
 
   .footer_nav {
-    margin-left: -10px;
-    font-size: 0.857rem
+    margin-left: 0;
+    font-size: 14px;
+
+    a {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .footer_copy {
-    font-size: 0.929rem;
+    font-size: 18px
   }
 
   .side_nav {
     display: none;
   }
+
+  .header {
+    .header_nav {
+      position: fixed;
+      top: 80px;
+      bottom: 0;
+      left: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-left: 0;
+      padding: 30px 4vw;
+      background-color: #fff;
+      transition: left .3s ease-in-out;
+
+      .nav {
+        order: 1;
+        border-top: 1px solid #1b1d28;
+        border-bottom: 1px solid #1b1d28;
+        margin: 30px 0;
+
+        .btn_play {
+          display: none;
+        }
+
+        a {
+          height: 55px;
+          padding-left: 45px;
+          color: #1b1d28;
+          font-size: 14px;
+          font-weight: 600;
+
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+
+          &:not(:first-child) {
+            margin-left: 0;
+            border-top: 1px solid #eceef3;
+
+            &::before {
+              content: none;
+            }
+          }
+
+          .ico_link {
+            margin-left: 5px;
+            transform: scale(0.7);
+          }
+        }
+      }
+
+      .my_btns {
+        display: flex;
+        justify-content: space-between;
+        order: 0;
+      }
+
+      .user_btns {
+        order: 10;
+      }
+
+      .btn_profile {
+        width: calc(50% - 5px);
+
+        &:only-child {
+          width: 100%;
+        }
+      }
+    }
+
+    &.open {
+      .header_nav {
+        left: 0;
+        box-shadow: -10px 5px 5px rgba(0,0,0,0.1);
+      }
+
+      .btn_menu {
+        .ico {
+          width: 40%;
+          border-color: transparent;
+
+          &::before,
+          &::after {
+
+          }
+
+          &::before {
+            left: -1px;
+            margin-top: 0;
+            transform: rotate(45deg) translateY(-50%);
+          }
+
+          &::after {
+            right: -1px;
+            margin-top: 0;
+            transform: rotate(-45deg) translateY(-50%);
+          }
+        }
+      }
+    }
+
+  }
 }
 
 @media screen and (max-width: 767px) {
-  html {
-    font-size: 14px;
-  }
-
-  .container_sub,
-  .container_login {
-    min-height: calc(100vh - 150px);
-  }
-
   .btn_menu {
-    .ico {
-      border-bottom-color: transparent;
-    }
-    .ico::before,
-    .ico::after {
-      height: 1px;
-    }
+    //.ico {
+    //  border-bottom-color: transparent;
+    //}
+    //.ico::before,
+    //.ico::after {
+    //  height: 1px;
+    //}
 
     .ico::before {
-      margin-top: -5px;
+      margin-top: -6px;
     }
 
     .ico::after {
-      margin-top: 3px;
+      margin-top: 4px;
     }
   }
 
   .side_sns {
     .btn_sns {
-      width: 35px;
-      height: 40px;
+      width: 40px;
+      height: 46px;
     }
 
     .discord {
-      background-size: 17px;
+      background-size: 18px;
     }
 
     .twitter {
-      background-size: 17px;
+      background-size: 18px;
     }
 
     .medium {
-      background-size: 20px;
+      background-size: 22px;
     }
   }
 
-  .footer .side_sns li:not(:first-of-type) {
-    margin-left: 6px;
-  }
+  .footer {
+    padding-top:6vw;
+    padding-bottom: 8vw;
 
-  .footer_copy {
-    padding: 5px 0;
-    @include font_s;
+    .side_sns li:not(:first-of-type) {
+      margin-left: 10px;
+    }
   }
 
   .footer_nav {
     display: flex;
     margin-left: -5px;
-    @include font_ss;
+    font-size: 12px;
+    letter-spacing: 0;
 
     a {
       padding: 5px;
@@ -123,12 +226,29 @@
       }
     }
   }
+
+  .footer_copy {
+    padding: 5px 0;
+    font-size: 14px;
+    letter-spacing: 0;
+  }
 }
 
-@media screen and (max-width: 319px) {
+@media screen and (max-width: 613px) {
+  .header,
+  .header .content_wrapper {
+    height: 13vw;
+  }
+
+  .header .header_nav {
+    top: 13vw
+  }
+}
+
+@media screen and (max-width: 413px) {
   .container_sub,
   .container_login {
-    min-height: calc(100vh - 180px);
+    //min-height: calc(100vh - 180px);
   }
 
   .footer {
@@ -138,6 +258,7 @@
 
     .side_sns {
       justify-content: flex-start;
+      margin-bottom: 10px;
     }
   }
 }

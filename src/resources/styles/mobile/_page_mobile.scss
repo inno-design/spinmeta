@@ -2,6 +2,32 @@
   .point_title {
     display: none
   }
+
+  .dashboard_table {
+    .table_dashboard {
+      display: block;
+
+      thead {
+        display: none;
+      }
+
+      tbody {
+        display: block;
+
+        tr {
+          display: flex;
+          align-items: stretch;
+          flex-wrap: wrap;
+          width: 100%;
+        }
+
+        td {
+          display: flex;
+          border: 0;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -152,11 +178,14 @@
 
   .profile_btns {
     margin-top: 5vw;
+
+    .btn_profile {
+      width: calc(50% - 10px);
+      margin: 0 5px;
+    }
   }
 
   .btn_profile {
-    width: calc(50% - 10px);
-    margin: 0 5px;
     font-size: 2.5vw;
     letter-spacing: 0;
     white-space: nowrap;
