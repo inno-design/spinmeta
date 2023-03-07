@@ -477,6 +477,9 @@ textarea,
 }
 
 .btn_tab {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 180px;
   height: 50px;
   border: 0;
@@ -1950,10 +1953,10 @@ table {
   .point_btns .btn_profile {
     max-width: unset;
     height: 3em;
-    font-size: 3.5vw;
+    font-size: 20px;
   }
   .point_btns .btn_profile .cash {
-    padding-left: 6vw;
+    padding-left: 1.8em;
     background-size: auto 40%;
   }
 
@@ -2061,6 +2064,8 @@ table {
   .login_sns button {
     padding: 0 1.4rem;
     letter-spacing: 0;
+    font-size: 14px;
+    font-weight: 500;
   }
   .login_sns button:not(:first-of-type) {
     margin-top: 8px;
@@ -2117,7 +2122,7 @@ table {
   }
 
   .btn_profile {
-    font-size: 2.5vw;
+    font-size: 14px;
     letter-spacing: 0;
     white-space: nowrap;
   }
@@ -2134,7 +2139,7 @@ table {
     width: 32vw;
     height: 3em;
     border-radius: 2em;
-    font-size: 3.5vw;
+    font-size: 18px;
     letter-spacing: 0;
     white-space: nowrap;
   }
