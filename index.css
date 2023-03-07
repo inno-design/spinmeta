@@ -1588,6 +1588,8 @@ table {
   }
   .header .header_nav .nav {
     order: 1;
+    flex-direction: column;
+    width: 100%;
     border-top: 1px solid #1b1d28;
     border-bottom: 1px solid #1b1d28;
     margin: 30px 0;
@@ -1622,6 +1624,7 @@ table {
     order: 0;
   }
   .header .header_nav .user_btns {
+    display: block;
     order: 10;
   }
   .header .header_nav .btn_profile {
