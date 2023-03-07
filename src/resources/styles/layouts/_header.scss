@@ -76,6 +76,11 @@
     &.selected {
       color: #f600ff;
     }
+
+    &.nfts,
+    &.dashboard {
+      display: none;
+    }
   }
 }
 

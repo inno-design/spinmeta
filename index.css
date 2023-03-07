@@ -697,6 +697,11 @@ table {
 .footer_nav a.selected {
   color: #f600ff;
 }
+.header_nav a.nfts, .header_nav a.dashboard,
+.footer_nav a.nfts,
+.footer_nav a.dashboard {
+  display: none;
+}
 
 .header_nav {
   margin-left: 95px;
@@ -1313,7 +1318,7 @@ table {
 
 .mypage_detail .content_wrapper {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 120px;
 }
 
 .profile_photo {
@@ -1507,16 +1512,171 @@ table {
 }
 .table_dashboard tbody td {
   height: 75px;
-  padding: 0 35px;
+  padding: 0 20px;
   border-bottom: 1px solid #d6dbe9;
   font-size: 20px;
   font-weight: 500;
+  text-align: center;
+}
+.table_dashboard tbody td > * {
+  vertical-align: middle;
 }
 .table_dashboard .ico {
   display: inline-block;
-  width: 42px;
+  width: 48px;
+  text-align: left;
+}
+.table_dashboard .ico img {
+  margin-top: -2px;
+}
+.table_dashboard .plus {
+  color: #1da644;
+}
+.table_dashboard .minus {
+  color: #cd1010;
+}
+.table_dashboard .claim {
+  width: 240px;
+}
+.table_dashboard .claim .ico_wrapper {
+  display: inline-flex;
+  width: unset;
+}
+.table_dashboard .claim .ico_wrapper .txt {
+  padding-left: 4px;
+  font-size: 14px;
+}
+.table_dashboard .claimed,
+.table_dashboard .refunded {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  font-weight: 500;
+  border-radius: 4px;
+  background-color: #dee2ed;
+  line-height: 1.2em;
+  font-size: 1rem;
+}
+.table_dashboard .claimed .txt,
+.table_dashboard .refunded .txt {
+  color: #8a29c1;
+  font-weight: 600;
+}
+.table_dashboard .claimed .ctime,
+.table_dashboard .refunded .ctime {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+.table_dashboard .refunded {
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.table_dashboard .refunded .txt {
+  color: unset;
+}
+.table_dashboard .refunded .noti {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  margin-left: 6px;
+  border-radius: 50%;
+  background: #fff url(src/resources/images/icon/ico_info.svg) no-repeat center center;
+}
+.table_dashboard .refunded .noti::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border: 5px solid transparent;
+  border-bottom-color: #5f6672;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.table_dashboard .refunded .noti .ico {
+  overflow: hidden;
+  text-indent: -9999px;
+  white-space: nowrap;
+}
+.table_dashboard .refunded:hover .tooltip,
+.table_dashboard .refunded:hover .noti::after, .table_dashboard .refunded:focus .tooltip,
+.table_dashboard .refunded:focus .noti::after {
+  opacity: 1;
+  visibility: visible;
+}
+.table_dashboard .tooltip {
+  z-index: 1;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  padding: 10px 30px;
+  font-size: 14px;
+  letter-spacing: 0;
+  border-radius: 4px;
+  background-color: #5f6672;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 400;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
+.ico_wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.ico_wrapper .ico {
+  flex-shrink: 0;
+}
+
+.btn_claim {
+  width: 180px;
+  height: 50px;
+  color: #fff;
+  font-weight: 500;
+  border: 0;
+  border-radius: 4px;
+  background-color: #b23cf4;
+}
+
+.dashboard_btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn_more {
+  width: 240px;
+  height: 60px;
+  border: 1px solid #e0e3eb;
+  border-radius: 30px;
+  background-color: #fff;
+  font-weight: 600;
+  transition: border-color 0.2s;
+}
+.btn_more:hover {
+  border-color: #cb83f8;
+}
+.btn_more .ico {
+  padding-right: 23px;
+  background: url(src/resources/images/icon/ico_dropdown.svg) no-repeat right 60%;
+}
+
+@media screen and (max-width: 1919px) {
+  .table_dashboard .tooltip {
+    transform: translateX(-80%);
+  }
+}
 @media screen and (max-width: 1279px) {
   .container_sub,
 .container_login {
@@ -1527,18 +1687,6 @@ table {
   .content_wrapper {
     padding-left: 3vw;
     padding-right: 3vw;
-  }
-
-  .btn_menu {
-    display: block;
-  }
-
-  .btn_view {
-    display: none;
-  }
-
-  .btn_util:not(:first-child)::before {
-    content: none;
   }
 
   .footer {
@@ -1573,6 +1721,15 @@ table {
     display: none;
   }
 
+  .header .btn_menu {
+    display: block;
+  }
+  .header .btn_view {
+    display: none;
+  }
+  .header .btn_util:not(:first-child)::before {
+    content: none;
+  }
   .header .header_nav {
     position: fixed;
     top: 80px;
@@ -1618,16 +1775,25 @@ table {
     margin-left: 5px;
     transform: scale(0.7);
   }
+  .header .header_nav .mypage {
+    display: none;
+  }
   .header .header_nav .main {
     background: url(src/resources/images/layouts/ico_nav_main.svg) no-repeat 7px center;
     background-size: 22px;
   }
+  .header .header_nav .nfts {
+    display: flex;
+    background: url(src/resources/images/layouts/ico_nav_nfts.svg) no-repeat 6px center;
+    background-size: 25px;
+  }
   .header .header_nav .dashboard {
+    display: flex;
     background: url(src/resources/images/layouts/ico_nav_dashboard.svg) no-repeat 5px center;
     background-size: 25px;
   }
   .header .header_nav .wiki {
-    background: url(src/resources/images/layouts/ico_nav_wiki.svg) no-repeat 7px center;
+    background: url(src/resources/images/layouts/ico_nav_wiki.svg) no-repeat 6px center;
     background-size: 26px;
   }
   .header .header_nav .my_btns {
@@ -1742,26 +1908,6 @@ table {
   .point_title {
     display: none;
   }
-
-  .dashboard_table .table_dashboard {
-    display: block;
-  }
-  .dashboard_table .table_dashboard thead {
-    display: none;
-  }
-  .dashboard_table .table_dashboard tbody {
-    display: block;
-  }
-  .dashboard_table .table_dashboard tbody tr {
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-  .dashboard_table .table_dashboard tbody td {
-    display: flex;
-    border: 0;
-  }
 }
 @media screen and (max-width: 1023px) {
   .dashboard_header {
@@ -1809,6 +1955,79 @@ table {
   .point_btns .btn_profile .cash {
     padding-left: 6vw;
     background-size: auto 40%;
+  }
+
+  .dashboard_table .table_dashboard {
+    display: block;
+  }
+  .dashboard_table .table_dashboard thead {
+    display: none;
+  }
+  .dashboard_table .table_dashboard tbody {
+    display: block;
+  }
+  .dashboard_table .table_dashboard tbody tr {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 2vw;
+    border-top: 1px solid #d6dbe9;
+  }
+  .dashboard_table .table_dashboard tbody td {
+    display: flex;
+    height: unset;
+    border: 0;
+    padding: 0;
+    font-size: 18px;
+  }
+  .dashboard_table .table_dashboard tbody td.time {
+    width: 100%;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  .dashboard_table .table_dashboard tbody td.claim {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .dashboard_table .table_dashboard tbody td.claim > * {
+    flex-grow: 1;
+    font-size: 18px;
+  }
+  .dashboard_table .table_dashboard tbody td.claim .timer,
+.dashboard_table .table_dashboard tbody td.claim .ico_wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: #dee2ed;
+    line-height: 1.2em;
+  }
+  .dashboard_table .table_dashboard tbody td.claim .claimed {
+    flex-direction: row;
+  }
+  .dashboard_table .table_dashboard tbody td.claim .claimed .ctime {
+    padding-left: 6px;
+    padding-top: 3px;
+  }
+  .dashboard_table .table_dashboard tbody td.event {
+    width: 55%;
+    font-weight: 600;
+  }
+  .dashboard_table .table_dashboard tbody td.point {
+    width: 45%;
+    font-weight: 600;
+  }
+  .dashboard_table .table_dashboard .tooltip {
+    transform: translateX(-65%);
+  }
+
+  .dashboard_btns {
+    margin-top: 0;
+    padding-top: 40px;
+    border-top: 1px solid #d6dbe9;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1874,7 +2093,7 @@ table {
   }
   .mypage_detail .content_wrapper {
     padding-top: 8vw;
-    padding-bottom: 8vw;
+    padding-bottom: 16vw;
   }
 
   .profile_name {

@@ -2,32 +2,6 @@
   .point_title {
     display: none
   }
-
-  .dashboard_table {
-    .table_dashboard {
-      display: block;
-
-      thead {
-        display: none;
-      }
-
-      tbody {
-        display: block;
-
-        tr {
-          display: flex;
-          align-items: stretch;
-          flex-wrap: wrap;
-          width: 100%;
-        }
-
-        td {
-          display: flex;
-          border: 0;
-        }
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -81,6 +55,94 @@
         background-size: auto 40%;
       }
     }
+  }
+
+  .dashboard_table {
+    .table_dashboard {
+      display: block;
+
+      thead {
+        display: none;
+      }
+
+      tbody {
+        display: block;
+
+        tr {
+          display: flex;
+          align-items: stretch;
+          flex-wrap: wrap;
+          width: 100%;
+          padding: 20px 2vw;
+          border-top: 1px solid #d6dbe9;
+        }
+
+        td {
+          display: flex;
+          height: unset;
+          border: 0;
+          padding: 0;
+          font-size: 18px;
+
+          &.time {
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 14px;
+          }
+
+          &.claim {
+            width: 100%;
+            margin-top: 15px;
+
+            & > * {
+              flex-grow: 1;
+              font-size: 18px;
+            }
+
+            .timer,
+            .ico_wrapper {
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              height: 50px;
+              font-weight: 500;
+              border-radius: 4px;
+              background-color: #dee2ed;
+              line-height: 1.2em;
+            }
+
+            .claimed {
+              flex-direction: row;
+
+              .ctime {
+                padding-left: 6px;
+                padding-top: 3px;
+              }
+            }
+          }
+
+          &.event {
+            width: 55%;
+            font-weight: 600;
+          }
+
+          &.point {
+            width: 45%;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .tooltip {
+        transform: translateX(-65%);
+      }
+    }
+  }
+
+  .dashboard_btns {
+    margin-top: 0;
+    padding-top: 40px;
+    border-top: 1px solid #d6dbe9;
   }
 }
 
@@ -148,9 +210,11 @@
 
   /********* my page *********/
 
-  .mypage_profile .content_wrapper {
-    padding-top: 10vw;
-    padding-bottom: 8vw;
+  .mypage_profile {
+    .content_wrapper {
+      padding-top: 10vw;
+      padding-bottom: 8vw;
+    }
   }
 
   .mypage_detail {
@@ -159,7 +223,7 @@
 
     .content_wrapper {
       padding-top: 8vw;
-      padding-bottom: 8vw;
+      padding-bottom: 16vw;
     }
   }
 

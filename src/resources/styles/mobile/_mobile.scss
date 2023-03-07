@@ -1,3 +1,9 @@
+@media screen and (max-width: 1919px) {
+  .table_dashboard .tooltip {
+    transform: translateX(-80%);
+  }
+}
+
 @media screen and (max-width: 1279px) {
   .container_sub,
   .container_login {
@@ -8,15 +14,6 @@
   .content_wrapper {
     padding-left: 3vw;
     padding-right: 3vw;
-  }
-  .btn_menu {
-    display: block;
-  }
-  .btn_view {
-    display: none;
-  }
-  .btn_util:not(:first-child)::before {
-    content: none;
   }
 
   .footer {
@@ -54,6 +51,16 @@
   }
 
   .header {
+    .btn_menu {
+      display: block;
+    }
+    .btn_view {
+      display: none;
+    }
+    .btn_util:not(:first-child)::before {
+      content: none;
+    }
+
     .header_nav {
       position: fixed;
       top: 80px;
@@ -106,16 +113,24 @@
         }
       }
 
+      .mypage { display: none }
+
       .main {
         background: url(src/resources/images/layouts/ico_nav_main.svg) no-repeat 7px center;
         background-size: 22px;
       }
+      .nfts {
+        display: flex;
+        background: url(src/resources/images/layouts/ico_nav_nfts.svg) no-repeat 6px center;
+        background-size: 25px;
+      }
       .dashboard {
+        display: flex;
         background: url(src/resources/images/layouts/ico_nav_dashboard.svg) no-repeat 5px center;
         background-size: 25px;
       }
       .wiki {
-        background: url(src/resources/images/layouts/ico_nav_wiki.svg) no-repeat 7px center;
+        background: url(src/resources/images/layouts/ico_nav_wiki.svg) no-repeat 6px center;
         background-size: 26px;
       }
 
