@@ -1513,7 +1513,7 @@ table {
 .table_dashboard thead th:last-of-type {
   border-radius: 0 4px 4px 0;
 }
-.table_dashboard tbody td {
+.table_dashboard td {
   height: 75px;
   padding: 0 20px;
   border-bottom: 1px solid #d6dbe9;
@@ -1521,7 +1521,7 @@ table {
   font-weight: 500;
   text-align: center;
 }
-.table_dashboard tbody td > * {
+.table_dashboard td > * {
   vertical-align: middle;
 }
 .table_dashboard .ico {
@@ -1584,13 +1584,17 @@ table {
 }
 .table_dashboard .refunded .noti {
   position: relative;
+  margin-left: 6px;
+}
+.table_dashboard .refunded .noti .ico {
+  position: relative;
+  display: block;
   width: 22px;
   height: 22px;
-  margin-left: 6px;
   border-radius: 50%;
   background: #fff url(src/resources/images/icon/ico_info.svg) no-repeat center center;
 }
-.table_dashboard .refunded .noti::after {
+.table_dashboard .refunded .noti .ico::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -1602,14 +1606,9 @@ table {
   opacity: 0;
   transition: opacity 0.3s;
 }
-.table_dashboard .refunded .noti .ico {
-  overflow: hidden;
-  text-indent: -9999px;
-  white-space: nowrap;
-}
 .table_dashboard .refunded:hover .tooltip,
-.table_dashboard .refunded:hover .noti::after, .table_dashboard .refunded:focus .tooltip,
-.table_dashboard .refunded:focus .noti::after {
+.table_dashboard .refunded:hover .ico::after, .table_dashboard .refunded:focus .tooltip,
+.table_dashboard .refunded:focus .ico::after {
   opacity: 1;
   visibility: visible;
 }
@@ -1631,6 +1630,7 @@ table {
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.3s;
+  line-height: 1.3;
 }
 
 .ico_wrapper {
@@ -1672,14 +1672,9 @@ table {
 }
 .btn_more .ico {
   padding-right: 23px;
-  background: url(src/resources/images/icon/ico_dropdown.svg) no-repeat right 60%;
+  background: url(src/resources/images/icon/ico_dropdown.svg) no-repeat 99% 60%;
 }
 
-@media screen and (max-width: 1919px) {
-  .table_dashboard .tooltip {
-    transform: translateX(-80%);
-  }
-}
 @media screen and (max-width: 1279px) {
   .container_sub,
 .container_login {
@@ -1907,6 +1902,18 @@ table {
     margin-bottom: 10px;
   }
 }
+@media screen and (max-width: 1599px) {
+  .table_dashboard td.claim {
+    position: relative;
+  }
+  .table_dashboard td.claim .noti {
+    position: static;
+  }
+  .table_dashboard .tooltip {
+    top: calc(100% - 4px);
+    transform: translateX(-65%);
+  }
+}
 @media screen and (max-width: 1279px) {
   .point_title {
     display: none;
@@ -1953,78 +1960,89 @@ table {
   .point_btns .btn_profile {
     max-width: unset;
     height: 3em;
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   .point_btns .btn_profile .cash {
     padding-left: 6vw;
     background-size: auto 40%;
   }
 
-  .dashboard_table .table_dashboard {
+  .table_dashboard {
     display: block;
   }
-  .dashboard_table .table_dashboard thead {
+  .table_dashboard thead {
     display: none;
   }
-  .dashboard_table .table_dashboard tbody {
+  .table_dashboard tbody {
     display: block;
   }
-  .dashboard_table .table_dashboard tbody tr {
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-    width: 100%;
+  .table_dashboard tr {
+    display: block;
     padding: 20px 2vw;
     border-top: 1px solid #d6dbe9;
+    overflow: hidden;
   }
-  .dashboard_table .table_dashboard tbody td {
+  .table_dashboard td {
     display: flex;
     height: unset;
     border: 0;
     padding: 0;
     font-size: 18px;
   }
-  .dashboard_table .table_dashboard tbody td.time {
+  .table_dashboard td.time {
     width: 100%;
     margin-bottom: 15px;
     font-size: 14px;
+    letter-spacing: 0;
   }
-  .dashboard_table .table_dashboard tbody td.claim {
+  .table_dashboard td.claim {
+    clear: both;
     width: 100%;
-    margin-top: 15px;
+    padding-top: 15px;
   }
-  .dashboard_table .table_dashboard tbody td.claim > * {
+  .table_dashboard td.claim > * {
     flex-grow: 1;
     font-size: 18px;
+    height: 2.3em;
   }
-  .dashboard_table .table_dashboard tbody td.claim .timer,
-.dashboard_table .table_dashboard tbody td.claim .ico_wrapper {
+  .table_dashboard td.claim .timer,
+.table_dashboard td.claim .ico_wrapper {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
     font-weight: 500;
     border-radius: 4px;
     background-color: #dee2ed;
     line-height: 1.2em;
   }
-  .dashboard_table .table_dashboard tbody td.claim .claimed {
+  .table_dashboard td.claim .claimed {
     flex-direction: row;
   }
-  .dashboard_table .table_dashboard tbody td.claim .claimed .ctime {
+  .table_dashboard td.claim .claimed .ctime {
     padding-left: 6px;
     padding-top: 3px;
   }
-  .dashboard_table .table_dashboard tbody td.event {
+  .table_dashboard td.event {
+    float: left;
     width: 55%;
     font-weight: 600;
+    letter-spacing: 0;
   }
-  .dashboard_table .table_dashboard tbody td.point {
+  .table_dashboard td.point {
+    float: left;
     width: 45%;
     font-weight: 600;
+    letter-spacing: 0;
   }
-  .dashboard_table .table_dashboard .tooltip {
-    transform: translateX(-65%);
+  .table_dashboard td .tooltip {
+    transform: translateX(-50%);
+  }
+  .table_dashboard .ico {
+    width: 2em;
+  }
+  .table_dashboard .ico img {
+    width: 80%;
+    margin-top: 0;
   }
 
   .dashboard_btns {
@@ -2139,7 +2157,7 @@ table {
     width: 32vw;
     height: 3em;
     border-radius: 2em;
-    font-size: 3.5vw;
+    font-size: 3vw;
     letter-spacing: 0;
     white-space: nowrap;
   }
@@ -2189,6 +2207,28 @@ table {
   }
   .point_value .item:not(:first-child)::after {
     height: 90%;
+  }
+
+  .table_dashboard td {
+    font-size: 15px;
+  }
+  .table_dashboard td.time {
+    font-size: 13px;
+  }
+  .table_dashboard td.claim > * {
+    font-size: inherit;
+  }
+  .table_dashboard .tooltip {
+    width: 95%;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 12px;
+    white-space: unset;
+  }
+
+  .btn_more {
+    height: 3em;
+    font-size: 3vw;
   }
 }
 

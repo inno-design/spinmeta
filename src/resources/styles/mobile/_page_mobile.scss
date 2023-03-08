@@ -1,3 +1,21 @@
+@media screen and (max-width: 1599px) {
+  .table_dashboard {
+    td {
+      &.claim {
+        position: relative;
+
+        .noti {
+          position: static;
+        }
+      }
+    }
+    .tooltip {
+      top: calc(100% - 4px);
+      transform: translateX(-65%);
+    }
+  }
+}
+
 @media screen and (max-width: 1279px) {
   .point_title {
     display: none
@@ -48,7 +66,7 @@
     .btn_profile {
       max-width: unset;
       height: 3em;
-      font-size: 3.5vw;
+      font-size: 3vw;
 
       .cash {
         padding-left: 6vw;
@@ -57,84 +75,94 @@
     }
   }
 
-  .dashboard_table {
-    .table_dashboard {
-      display: block;
+  .table_dashboard {
+    display: block;
 
-      thead {
-        display: none;
+    thead {
+      display: none;
+    }
+
+    tbody {
+      display: block;
+    }
+
+    tr {
+      display: block;
+      padding: 20px 2vw;
+      border-top: 1px solid #d6dbe9;
+      overflow: hidden;
+    }
+
+    td {
+      display: flex;
+      height: unset;
+      border: 0;
+      padding: 0;
+      font-size: 18px;
+
+      &.time {
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 14px;
+        letter-spacing: 0;
       }
 
-      tbody {
-        display: block;
+      &.claim {
+        clear: both;
+        width: 100%;
+        padding-top: 15px;
 
-        tr {
-          display: flex;
-          align-items: stretch;
-          flex-wrap: wrap;
-          width: 100%;
-          padding: 20px 2vw;
-          border-top: 1px solid #d6dbe9;
-        }
-
-        td {
-          display: flex;
-          height: unset;
-          border: 0;
-          padding: 0;
+        & > * {
+          flex-grow: 1;
           font-size: 18px;
+          height: 2.3em;
+        }
 
-          &.time {
-            width: 100%;
-            margin-bottom: 15px;
-            font-size: 14px;
-          }
+        .timer,
+        .ico_wrapper {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 500;
+          border-radius: 4px;
+          background-color: #dee2ed;
+          line-height: 1.2em;
+        }
 
-          &.claim {
-            width: 100%;
-            margin-top: 15px;
+        .claimed {
+          flex-direction: row;
 
-            & > * {
-              flex-grow: 1;
-              font-size: 18px;
-            }
-
-            .timer,
-            .ico_wrapper {
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              height: 50px;
-              font-weight: 500;
-              border-radius: 4px;
-              background-color: #dee2ed;
-              line-height: 1.2em;
-            }
-
-            .claimed {
-              flex-direction: row;
-
-              .ctime {
-                padding-left: 6px;
-                padding-top: 3px;
-              }
-            }
-          }
-
-          &.event {
-            width: 55%;
-            font-weight: 600;
-          }
-
-          &.point {
-            width: 45%;
-            font-weight: 600;
+          .ctime {
+            padding-left: 6px;
+            padding-top: 3px;
           }
         }
+      }
+
+      &.event {
+        float: left;
+        width: 55%;
+        font-weight: 600;
+        letter-spacing: 0;
+      }
+
+      &.point {
+        float: left;
+        width: 45%;
+        font-weight: 600;
+        letter-spacing: 0;
       }
 
       .tooltip {
-        transform: translateX(-65%);
+        transform: translateX(-50%);
+      }
+    }
+
+    .ico {
+      width: 2em;
+      img {
+        width: 80%;
+        margin-top: 0;
       }
     }
   }
@@ -271,7 +299,7 @@
     width: 32vw;
     height: 3em;
     border-radius: 2em;
-    font-size: 3.5vw;
+    font-size: 3vw;
     letter-spacing: 0;
     white-space: nowrap;
   }
@@ -332,10 +360,46 @@
       }
     }
   }
+
+  .table_dashboard {
+    td {
+      font-size: 15px;
+
+      &.time {
+        font-size: 13px;
+      }
+
+      &.claim {
+        & > * {
+          font-size: inherit;
+        }
+      }
+    }
+
+    .tooltip {
+      width: 95%;
+      padding-left: 4vw;
+      padding-right: 4vw;
+      font-size: 12px;
+      white-space: unset;
+    }
+  }
+
+  .btn_more {
+    height: 3em;
+    font-size: 3vw;
+  }
 }
 
 @media screen and (max-width: 459px) {
-  .btn_profile {
-    //font-size: 12px;
+  .dashboard_table {
+    .table_dashboard {
+      td {
+        &.event,
+        &.point {
+          //width: 100%;
+        }
+      }
+    }
   }
 }

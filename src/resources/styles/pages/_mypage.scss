@@ -227,7 +227,7 @@
     }
   }
 
-  tbody td {
+  td {
     height: 75px;
     padding: 0 20px;
     border-bottom: 1px solid #d6dbe9;
@@ -309,34 +309,35 @@
 
     .noti {
       position: relative;
-      width: 22px;
-      height: 22px;
       margin-left: 6px;
-      border-radius: 50%;
-      background: #fff url(src/resources/images/icon/ico_info.svg) no-repeat center center;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        border: 5px solid transparent;
-        border-bottom-color: #5f6672;
-        transform: translateX(-50%);
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity .3s;
-      }
 
       .ico {
-        @include ir;
+        position: relative;
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #fff url(src/resources/images/icon/ico_info.svg) no-repeat center center;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          border: 5px solid transparent;
+          border-bottom-color: #5f6672;
+          transform: translateX(-50%);
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity .3s;
+        }
       }
     }
 
     &:hover,
     &:focus {
       .tooltip,
-      .noti::after {
+      .ico::after {
         opacity: 1;
         visibility: visible;
       }
@@ -361,6 +362,7 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity .3s;
+    line-height: 1.3;
   }
 }
 
@@ -405,6 +407,6 @@
 
   .ico {
     padding-right: 23px;
-    background: url(src/resources/images/icon/ico_dropdown.svg) no-repeat right 60%;
+    background: url(src/resources/images/icon/ico_dropdown.svg) no-repeat 99% 60%;
   }
 }
