@@ -1953,10 +1953,10 @@ table {
   .point_btns .btn_profile {
     max-width: unset;
     height: 3em;
-    font-size: 20px;
+    font-size: 3.5vw;
   }
   .point_btns .btn_profile .cash {
-    padding-left: 1.8em;
+    padding-left: 6vw;
     background-size: auto 40%;
   }
 
@@ -2122,7 +2122,7 @@ table {
   }
 
   .btn_profile {
-    font-size: 14px;
+    font-size: 2.5vw;
     letter-spacing: 0;
     white-space: nowrap;
   }
@@ -2139,7 +2139,7 @@ table {
     width: 32vw;
     height: 3em;
     border-radius: 2em;
-    font-size: 18px;
+    font-size: 3.5vw;
     letter-spacing: 0;
     white-space: nowrap;
   }
