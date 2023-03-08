@@ -570,7 +570,7 @@ textarea,
 html {
   height: 100%;
   font-size: 16px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 body {
@@ -590,6 +590,10 @@ table {
   letter-spacing: 1px;
 }
 
+small {
+  letter-spacing: 0 !important;
+}
+
 .font_title {
   font-family: Montserrat, sans-serif !important;
   font-weight: 800 !important;
@@ -602,6 +606,7 @@ table {
   min-width: 280px;
   min-height: 100%;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .content_wrapper {
@@ -1524,6 +1529,9 @@ table {
 .table_dashboard td > * {
   vertical-align: middle;
 }
+.table_dashboard td small {
+  padding-left: 4px;
+}
 .table_dashboard .ico {
   display: inline-block;
   width: 48px;
@@ -1545,10 +1553,6 @@ table {
   display: inline-flex;
   width: unset;
 }
-.table_dashboard .claim .ico_wrapper .txt {
-  padding-left: 4px;
-  font-size: 14px;
-}
 .table_dashboard .claimed,
 .table_dashboard .refunded {
   display: inline-flex;
@@ -1567,11 +1571,6 @@ table {
 .table_dashboard .refunded .txt {
   color: #8a29c1;
   font-weight: 600;
-}
-.table_dashboard .claimed .ctime,
-.table_dashboard .refunded .ctime {
-  font-size: 14px;
-  letter-spacing: 0;
 }
 .table_dashboard .refunded {
   position: relative;
@@ -1604,9 +1603,9 @@ table {
 .tooltip_btn::after {
   content: "";
   position: absolute;
-  top: calc(100% - 2px);
+  top: calc(100% - 5px);
   left: 50%;
-  border: 7px solid transparent;
+  border: 10px solid transparent;
   border-bottom-color: #5f6672;
   transform: translateX(-50%);
   visibility: hidden;
@@ -1689,6 +1688,8 @@ table {
   margin: -10px;
 }
 .nfts_container .item {
+  display: flex;
+  flex-direction: column;
   width: calc(25% - 20px);
   margin: 10px;
   border-radius: 14px;
@@ -1716,33 +1717,27 @@ table {
   transition: transform 0.3s;
 }
 .nfts_container .info {
+  flex-grow: 1;
   position: relative;
-  padding-bottom: 27%;
-}
-.nfts_container .info .inner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding: 6%;
 }
 .nfts_container .info .label {
-  width: 100%;
+  display: block;
   color: #828990;
   letter-spacing: 0;
+  padding-top: 4px;
 }
 .nfts_container .info .title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-right: 70px;
 }
 .nfts_container .info .title .txt {
   font-size: 20px;
   font-weight: 600;
+}
+.nfts_container .info .btn_small {
+  position: absolute;
+  top: 15px;
+  right: 6%;
 }
 .nfts_container .action {
   position: relative;
@@ -2250,7 +2245,7 @@ table {
   }
 
   .table_dashboard .tooltip .tooltip_pop {
-    top: calc(50% + 19px);
+    top: calc(100% + 5px);
   }
 
   /********* my page *********/
@@ -2367,17 +2362,24 @@ table {
   .table_dashboard td.claim > * {
     font-size: inherit;
   }
-  .table_dashboard .tooltip .tooltip_btn {
-    width: 1.2em;
-    height: 1.2em;
-    background-size: auto 60%;
-  }
   .table_dashboard .tooltip_pop {
     width: 95%;
     padding-left: 4vw;
     padding-right: 4vw;
     font-size: 12px;
     white-space: unset;
+  }
+
+  .tooltip_btn {
+    background-size: auto 60%;
+  }
+
+  .tooltip_btn,
+.btn_add {
+    width: 4vw;
+    height: 4vw;
+    max-width: 22px;
+    max-height: 22px;
   }
 
   .btn_more {
@@ -2396,6 +2398,7 @@ table {
   /* nfts */
   .nfts_container {
     margin: -1vw;
+    letter-spacing: 0;
   }
   .nfts_container .item {
     width: calc(50% - 2vw);
@@ -2408,7 +2411,53 @@ table {
   .nfts_container .action {
     border-radius: 0 0 7px 7px;
     font-size: 3vw;
-    letter-spacing: 0;
+  }
+  .nfts_container .info {
+    padding: 3vw;
+  }
+  .nfts_container .info .label {
+    padding-top: 2px;
+    font-size: 11px;
+  }
+  .nfts_container .info .title {
+    padding-right: 50px;
+  }
+  .nfts_container .info .title .txt {
+    font-size: 3vw;
+  }
+  .nfts_container .info .btn_small {
+    top: 3vw;
+    right: 3vw;
+  }
+  .nfts_container .btn_small {
+    height: 2em;
+    font-size: 11px;
+    padding: 0 6px;
+  }
+}
+@media screen and (max-width: 459px) {
+  .table_dashboard .tooltip .tooltip_pop {
+    top: calc(100% + 2px);
+  }
+}
+@media screen and (max-width: 319px) {
+  .table_dashboard td.event {
+    width: 100%;
+  }
+  .table_dashboard td.point {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .table_dashboard .tooltip .tooltip_pop {
+    top: calc(100%);
+  }
+
+  .nfts_container .item {
+    width: calc(100% - 2vw);
+  }
+  .nfts_container .action {
+    padding-bottom: 10vw;
   }
 }
 

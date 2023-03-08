@@ -120,6 +120,10 @@
     & > * {
       vertical-align: middle;
     }
+
+    small {
+      padding-left: 4px;
+    }
   }
 
   .ico {
@@ -146,11 +150,6 @@
     .ico_wrapper {
       display: inline-flex;
       width: unset;
-
-      .txt {
-        padding-left: 4px;
-        font-size: 14px;
-      }
     }
   }
 
@@ -171,11 +170,6 @@
     .txt {
       color: #8a29c1;
       font-weight: 600
-    }
-
-    .ctime {
-      font-size: 14px;
-      letter-spacing: 0;
     }
   }
 
@@ -215,9 +209,9 @@
   &::after {
     content: '';
     position: absolute;
-    top: calc(100% - 2px);
+    top: calc(100% - 5px);
     left: 50%;
-    border: 7px solid transparent;
+    border: 10px solid transparent;
     border-bottom-color: #5f6672;
     transform: translateX(-50%);
     visibility: hidden;

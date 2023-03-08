@@ -242,7 +242,7 @@
   }
 
   .table_dashboard .tooltip .tooltip_pop {
-    top: calc(50% + 19px)
+    top: calc(100% + 5px)
   }
 
   /********* my page *********/
@@ -383,12 +383,6 @@
       }
     }
 
-    .tooltip .tooltip_btn {
-      width: 1.2em;
-      height: 1.2em;
-      background-size: auto 60%;
-    }
-
     .tooltip_pop {
       width: 95%;
       padding-left: 4vw;
@@ -396,6 +390,18 @@
       font-size: 12px;
       white-space: unset;
     }
+  }
+
+  .tooltip_btn {
+    background-size: auto 60%;
+  }
+
+  .tooltip_btn,
+  .btn_add {
+    width: 4vw;
+    height: 4vw;
+    max-width: 22px;
+    max-height: 22px;
   }
 
   .btn_more {
@@ -416,6 +422,7 @@
 
   .nfts_container {
     margin: -1vw;
+    letter-spacing: 0;
 
     .item {
       width: calc(50% - 2vw);
@@ -430,20 +437,67 @@
     .action {
       border-radius: 0 0 7px 7px;
       font-size: 3vw;
-      letter-spacing: 0;
+    }
+
+    .info {
+      padding: 3vw;
+
+      .label {
+        padding-top: 2px;
+        font-size: 11px
+      }
+
+      .title {
+        padding-right: 50px;
+
+        .txt {
+          font-size: 3vw;
+        }
+      }
+
+      .btn_small {
+        top: 3vw;
+        right: 3vw;
+      }
+    }
+
+    .btn_small {
+      height: 2em;
+      font-size: 11px;
+      padding: 0 6px;
     }
   }
 }
 
 @media screen and (max-width: 459px) {
-  .dashboard_table {
-    .table_dashboard {
-      td {
-        &.event,
-        &.point {
-          //width: 100%;
-        }
-      }
+  .table_dashboard .tooltip .tooltip_pop {
+    top: calc(100% + 2px)
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .table_dashboard td {
+    &.event {
+      width: 100%
+    }
+
+    &.point {
+      width: 100%;
+      margin-top: 5px
+    }
+  }
+
+  .table_dashboard .tooltip .tooltip_pop {
+    top: calc(100%)
+  }
+
+  .nfts_container {
+    .item {
+      width: calc(100% - 2vw);
+    }
+
+    .action {
+      padding-bottom: 10vw;
     }
   }
 }
