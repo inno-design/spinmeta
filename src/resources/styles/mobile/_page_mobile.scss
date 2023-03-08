@@ -405,6 +405,27 @@
       background-size: auto 40%;
     }
   }
+
+  /* nfts */
+
+  .nfts_container {
+    margin: -1vw;
+
+    .item {
+      width: calc(50% - 2vw);
+      margin: 1vw;
+      border-radius: 7px;
+    }
+
+    .img {
+      border-radius: 7px 7px 0 0;
+    }
+
+    .action {
+      border-radius: 0 0 7px 7px;
+      font-size: 3vw;
+    }
+  }
 }
 
 @media screen and (max-width: 459px) {

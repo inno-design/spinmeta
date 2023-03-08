@@ -1,0 +1,62 @@
+.nfts_container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+
+  .item {
+    width: calc(25% - 20px);
+    margin: 10px;
+    border-radius: 14px;
+    background-color: #fff;
+  }
+
+  .img {
+    position: relative;
+    padding-bottom: 94%;
+    border-radius: 14px 14px 0 0;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .info {
+    position: relative;
+    padding-bottom: 27%;
+
+    .inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .action {
+    position: relative;
+    padding-bottom: 20%;
+    border-radius: 0 0 14px 14px;
+    background-color: #c0c6d5;
+    font-weight: 600;
+
+    .inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
