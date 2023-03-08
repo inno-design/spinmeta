@@ -3,15 +3,14 @@
     td {
       &.claim {
         position: relative;
-
-        .noti {
-          position: static;
-        }
       }
     }
     .tooltip {
-      top: calc(100% - 4px);
-      transform: translateX(-65%);
+      position: static;
+
+      .tooltip_pop {
+        transform: translateX(-65%);
+      }
     }
   }
 }
@@ -90,7 +89,6 @@
       display: block;
       padding: 20px 2vw;
       border-top: 1px solid #d6dbe9;
-      overflow: hidden;
     }
 
     td {
@@ -152,10 +150,6 @@
         font-weight: 600;
         letter-spacing: 0;
       }
-
-      .tooltip {
-        transform: translateX(-50%);
-      }
     }
 
     .ico {
@@ -168,10 +162,18 @@
     }
   }
 
+  .table_dashboard .tooltip .tooltip_pop {
+    transform: translateX(-50%);
+  }
+
   .dashboard_btns {
     margin-top: 0;
     padding-top: 40px;
     border-top: 1px solid #d6dbe9;
+  }
+
+  .nfts_container .item {
+    width: calc(100% / 3 - 20px);
   }
 }
 
@@ -237,6 +239,10 @@
         }
       }
     }
+  }
+
+  .table_dashboard .tooltip .tooltip_pop {
+    top: calc(50% + 19px)
   }
 
   /********* my page *********/
@@ -377,13 +383,13 @@
       }
     }
 
-    .refunded .noti .ico {
+    .tooltip .tooltip_btn {
       width: 1.2em;
       height: 1.2em;
       background-size: auto 60%;
     }
 
-    .tooltip {
+    .tooltip_pop {
       width: 95%;
       padding-left: 4vw;
       padding-right: 4vw;
@@ -417,13 +423,14 @@
       border-radius: 7px;
     }
 
-    .img {
+    .photo {
       border-radius: 7px 7px 0 0;
     }
 
     .action {
       border-radius: 0 0 7px 7px;
       font-size: 3vw;
+      letter-spacing: 0;
     }
   }
 }
