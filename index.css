@@ -2439,6 +2439,13 @@ small {
   .table_dashboard .tooltip .tooltip_pop {
     top: calc(100% + 2px);
   }
+
+  .btn_add {
+    border-width: 1px;
+  }
+  .btn_add::before, .btn_add::after {
+    height: 1px;
+  }
 }
 @media screen and (max-width: 319px) {
   .table_dashboard td.event {

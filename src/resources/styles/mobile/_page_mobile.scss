@@ -473,6 +473,15 @@
   .table_dashboard .tooltip .tooltip_pop {
     top: calc(100% + 2px)
   }
+
+  .btn_add {
+    border-width: 1px;
+
+    &::before,
+    &::after {
+      height: 1px
+    }
+  }
 }
 
 @media screen and (max-width: 319px) {
