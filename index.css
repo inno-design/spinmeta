@@ -2218,6 +2218,11 @@ table {
   .table_dashboard td.claim > * {
     font-size: inherit;
   }
+  .table_dashboard .refunded .noti .ico {
+    width: 1.2em;
+    height: 1.2em;
+    background-size: auto 60%;
+  }
   .table_dashboard .tooltip {
     width: 95%;
     padding-left: 4vw;
@@ -2227,8 +2232,16 @@ table {
   }
 
   .btn_more {
+    width: 40vw;
+    min-width: 150px;
     height: 3em;
+    min-height: 40px;
+    border-radius: 3em;
     font-size: 3vw;
+  }
+  .btn_more .ico {
+    padding-right: 1.6em;
+    background-size: auto 40%;
   }
 }
 
