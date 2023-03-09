@@ -478,7 +478,7 @@
     border-width: 1px;
 
     &::before,
-    &::after {
+    &.plus::after {
       height: 1px
     }
   }

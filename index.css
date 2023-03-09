@@ -2443,7 +2443,7 @@ small {
   .btn_add {
     border-width: 1px;
   }
-  .btn_add::before, .btn_add::after {
+  .btn_add::before, .btn_add.plus::after {
     height: 1px;
   }
 }
