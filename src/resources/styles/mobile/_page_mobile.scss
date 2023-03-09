@@ -64,6 +64,8 @@
 
     .tooltip_pop {
       transform: translateX(-90%);
+      max-width: 85vw;
+      white-space: unset;
     }
   }
 
@@ -396,11 +398,14 @@
 
     .tooltip_pop {
       width: 95%;
-      padding-left: 4vw;
-      padding-right: 4vw;
-      font-size: 12px;
-      white-space: unset;
     }
+  }
+
+  .tooltip_pop {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    font-size: 12px;
+    white-space: unset;
   }
 
   .tooltip_btn {

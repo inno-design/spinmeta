@@ -2109,6 +2109,8 @@ small {
   }
   .point_value .tooltip_pop {
     transform: translateX(-90%);
+    max-width: 85vw;
+    white-space: unset;
   }
 
   .point_btns {
@@ -2388,6 +2390,9 @@ small {
   }
   .table_dashboard .tooltip_pop {
     width: 95%;
+  }
+
+  .tooltip_pop {
     padding-left: 4vw;
     padding-right: 4vw;
     font-size: 12px;
