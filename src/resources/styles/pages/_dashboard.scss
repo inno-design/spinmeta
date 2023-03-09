@@ -42,25 +42,6 @@
     padding: 0 20px 0 40px;
     white-space: nowrap;
 
-    .inner {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-
-    .label {
-      color: #5c5d64;
-      font-weight: 500;
-      letter-spacing: 0;
-      padding-right: 5px;
-    }
-
-    .value {
-      font-size: 42px;
-      font-weight: 800;
-      letter-spacing: 0;
-    }
-
     &:not(:first-child)::after {
       content: '';
       position: absolute;
@@ -70,6 +51,46 @@
       border-right: 1px solid #eceef3;
       transform: translateY(-50%);
     }
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .label_wrapper {
+    display: flex;
+  }
+
+  .tooltip {
+    height: 2px;
+    margin-left: 0;
+  }
+
+  .tooltip_btn {
+    width: 18px;
+    height: 18px;
+    background-color: #eceef3;
+    background-size: auto 60%;
+  }
+
+  .tooltip_pop {
+    top: calc(50% + 26px)
+  }
+
+  .label {
+    color: #5c5d64;
+    font-weight: 500;
+    letter-spacing: 0;
+    padding-right: 5px;
+    line-height: 18px;
+  }
+
+  .value {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 0;
   }
 }
 

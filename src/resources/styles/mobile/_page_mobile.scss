@@ -54,6 +54,17 @@
       justify-content: flex-end;
       padding: 0 4%;
     }
+
+    .tooltip_btn {
+      width: 4vw;
+      height: 4vw;
+      max-width: 18px;
+      max-height: 18px;
+    }
+
+    .tooltip_pop {
+      transform: translateX(-90%);
+    }
   }
 
   .point_btns {

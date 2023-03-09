@@ -1460,22 +1460,6 @@ small {
   padding: 0 20px 0 40px;
   white-space: nowrap;
 }
-.point_value .item .inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.point_value .item .label {
-  color: #5c5d64;
-  font-weight: 500;
-  letter-spacing: 0;
-  padding-right: 5px;
-}
-.point_value .item .value {
-  font-size: 42px;
-  font-weight: 800;
-  letter-spacing: 0;
-}
 .point_value .item:not(:first-child)::after {
   content: "";
   position: absolute;
@@ -1484,6 +1468,39 @@ small {
   height: 60px;
   border-right: 1px solid #eceef3;
   transform: translateY(-50%);
+}
+.point_value .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.point_value .label_wrapper {
+  display: flex;
+}
+.point_value .tooltip {
+  height: 2px;
+  margin-left: 0;
+}
+.point_value .tooltip_btn {
+  width: 18px;
+  height: 18px;
+  background-color: #eceef3;
+  background-size: auto 60%;
+}
+.point_value .tooltip_pop {
+  top: calc(50% + 26px);
+}
+.point_value .label {
+  color: #5c5d64;
+  font-weight: 500;
+  letter-spacing: 0;
+  padding-right: 5px;
+  line-height: 18px;
+}
+.point_value .value {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .point_btns {
@@ -2085,6 +2102,15 @@ small {
   .point_value .item {
     justify-content: flex-end;
     padding: 0 4%;
+  }
+  .point_value .tooltip_btn {
+    width: 4vw;
+    height: 4vw;
+    max-width: 18px;
+    max-height: 18px;
+  }
+  .point_value .tooltip_pop {
+    transform: translateX(-90%);
   }
 
   .point_btns {
