@@ -793,31 +793,31 @@ small {
 .btn_menu {
   display: none;
   margin-left: 1vw;
+  font-size: 10px;
 }
 .btn_menu .ico {
   position: relative;
   display: block;
-  width: 38%;
+  width: 40%;
   height: 2px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  margin: 0 auto;
+  margin: auto;
+  background: #fff;
+  transition: transform 0.2s;
 }
 .btn_menu .ico::before, .btn_menu .ico::after {
   content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
+  transition: 0.2s;
+  display: block;
+  width: 100%;
   height: 2px;
-  margin-top: -1px;
-  background-color: #fff;
+  background: #fff;
+  position: absolute;
 }
 .btn_menu .ico::before {
-  margin-top: -7px;
+  top: 0.6em;
 }
 .btn_menu .ico::after {
-  margin-top: 5px;
+  top: -0.6em;
 }
 .btn_menu .ico span {
   position: absolute;
@@ -1968,26 +1968,24 @@ small {
     box-shadow: -10px 5px 5px rgba(0, 0, 0, 0.1);
   }
   .header.open .btn_menu .ico {
-    width: 40%;
-    border-color: transparent;
+    background: transparent;
+  }
+  .header.open .btn_menu .ico::before, .header.open .btn_menu .ico::after {
+    top: 0;
   }
   .header.open .btn_menu .ico::before {
-    left: -1px;
-    margin-top: 0;
-    transform: rotate(45deg) translateY(-50%);
+    transform: rotate(-45deg);
   }
   .header.open .btn_menu .ico::after {
-    right: -1px;
-    margin-top: 0;
-    transform: rotate(-45deg) translateY(-50%);
+    transform: rotate(45deg);
   }
 }
 @media screen and (max-width: 767px) {
-  .btn_menu .ico::before {
-    margin-top: -6px;
-  }
-  .btn_menu .ico::after {
-    margin-top: 4px;
+  .btn_menu .ico,
+.btn_menu .ico::before,
+.btn_menu .ico::after {
+    height: 1px;
+    font-size: 2vw;
   }
 
   .side_sns .btn_sns {

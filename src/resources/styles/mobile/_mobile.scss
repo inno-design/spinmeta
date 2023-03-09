@@ -156,24 +156,19 @@
 
       .btn_menu {
         .ico {
-          width: 40%;
-          border-color: transparent;
+          background: transparent;
 
           &::before,
           &::after {
-
+            top:0;
           }
 
           &::before {
-            left: -1px;
-            margin-top: 0;
-            transform: rotate(45deg) translateY(-50%);
+            transform: rotate(-45deg);
           }
 
           &::after {
-            right: -1px;
-            margin-top: 0;
-            transform: rotate(-45deg) translateY(-50%);
+            transform: rotate(45deg);
           }
         }
       }
@@ -184,20 +179,11 @@
 
 @media screen and (max-width: 767px) {
   .btn_menu {
-    //.ico {
-    //  border-bottom-color: transparent;
-    //}
-    //.ico::before,
-    //.ico::after {
-    //  height: 1px;
-    //}
-
-    .ico::before {
-      margin-top: -6px;
-    }
-
+    .ico,
+    .ico::before,
     .ico::after {
-      margin-top: 4px;
+      height: 1px;
+      font-size: 2vw;
     }
   }
 
