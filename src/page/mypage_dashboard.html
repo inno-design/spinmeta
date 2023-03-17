@@ -136,7 +136,7 @@
                 </div>
               </div>
               <div class="point_btns">
-                <button type="button" class="btn_profile"><span class="cash">CASH OUT</span></button>
+                <button type="button" class="btn_profile" onclick="dialogOpen('pop01')"><span class="cash">CASH OUT</span></button>
               </div>
             </div>
             <!-- point_box end -->
@@ -325,14 +325,68 @@
 
     </div>
   </footer>
+
+  <!-- dialog start -->
+  <div class="pop_wrap hide" id="pop01">
+    <div class="pop_box">
+      <button type="button" class="btn_pop_close" onclick="dialogClose('pop01')"><span class="ico">Close</span></button>
+      <div class="pop_container">
+        <div class="pop_content">
+          <h3 class="pop_tit font_title">CASH OUT</h3>
+          <div class="pop_cash">
+            <div class="pop_cash_change">
+              <div class="pop_cash_point">
+                <span class="label">Spin Points</span>
+                <strong class="value">9,260,000</strong>
+              </div>
+              <div class="pop_cash_usd">
+                <span class="label">USD</span>
+                <strong class="value">260,000</strong>
+              </div>
+            </div>
+
+            <div class="pop_cash_noti">Current Exchange Rate 1SP<span class="arr">→</span>(600)$</div>
+          </div>
+          <p class="pop_msg nfts_pop_msg"><strong>Your Spin Points will be converted into USD<br>via Xsolla Payout.</strong></p>
+
+          <ul class="list_pop">
+            <li>
+              <p>This transaction cannot be undone</p>
+            </li>
+            <li>
+              <p>USD will be added to your Xsolla account balance and can be retrieved when exceeding $100</p>
+            </li>
+            <li>
+              <p>Check ‘Richman Wiki’ for more information</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pop_footer">
+        <button type="button" class="btn_action">CONTINUE WITH XSOLLA</button>
+      </div>
+    </div>
+  </div>
+  <!-- dialog end -->
 </div>
 
 <!-- custom select -->
 <script src="../../src/resources/js/select.js"></script>
+<script>
+  <!--Dialog 열기/닫기-->
+  const dialogOpen = function(id){
+    document.getElementById(id).classList.remove("hide");
+    document.body.style.overflow = "hidden";
+  }
+
+  const dialogClose = function(id){
+    document.getElementById(id).classList.add("hide");
+    document.body.style.overflow = "auto";
+  }
+</script>
 <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
 <!-- mobile nav -->
 <script src="../../src/resources/js/nav.js"></script>
-
 
 </body>
 </html>

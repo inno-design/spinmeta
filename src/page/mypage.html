@@ -110,20 +110,24 @@
           <div class="tab_content">
             <div class="nfts_container">
               <div class="nfts_item">
+                <a href="#" target="_blank" class="nfts_item_opensea"><img src="../../src/resources/images/icon/ico_opensea_w.svg" alt="OpenSea"></a>
                 <div class="nfts_item_photo"><img src="../../src/resources/images/tmp_nfts.jpg" alt="tmp"></div>
                 <div class="nfts_item_info">
                   <div class="inner">
                     <div class="title">
                       <span class="txt">Richman #9028</span>
-                      <button type="button" class="btn_small" onclick="dialogOpen('pop01')">Details</button>
+                      <a href="#" target="_blank" class="btn_small">Details</a>
                     </div>
                     <span class="label">Landmark</span>
                   </div>
                 </div>
                 <div class="nfts_item_action">
                   <div class="inner">
-                    <button type="button" class="btn_add"><span class="ico">Add</span></button>
-                    <span>RETRIEVE NFT</span>
+                    <button type="button" class="btn_action" onclick="dialogOpen('pop02')">
+                      <span class="ico_add">Del</span>
+                      <span>RETRIEVE NFT</span>
+                    </button>
+
                     <div class="tooltip">
                       <button type="button" class="tooltip_btn"><span class="ico">info</span></button>
                       <div class="tooltip_pop">
@@ -136,39 +140,46 @@
               </div>
 
               <div class="nfts_item">
+                <a href="#" target="_blank" class="nfts_item_opensea"><img src="../../src/resources/images/icon/ico_opensea_w.svg" alt="OpenSea"></a>
                 <div class="nfts_item_photo"><img src="../../src/resources/images/tmp_nfts.jpg" alt="tmp"></div>
                 <div class="nfts_item_info">
                   <div class="inner">
                     <div class="title">
                       <span class="txt">Richman #9028</span>
-                      <button type="button" class="btn_small">Details</button>
+                      <a href="#" target="_blank" class="btn_small">Details</a>
                     </div>
                     <span class="label">Landmark</span>
                   </div>
                 </div>
                 <div class="nfts_item_action add">
                   <div class="inner">
-                    <button type="button" class="btn_add plus"><span class="ico">Add</span></button>
-                    <span>USE IN GAME</span>
+                    <button type="button" class="btn_action" onclick="dialogOpen('pop01')">
+                      <span class="ico_add plus">Add</span>
+                      <span>USE IN GAME</span>
+                    </button>
                   </div>
                 </div>
               </div>
 
               <div class="nfts_item">
+                <a href="#" target="_blank" class="nfts_item_opensea"><img src="../../src/resources/images/icon/ico_opensea_w.svg" alt="OpenSea"></a>
                 <div class="nfts_item_photo"><img src="../../src/resources/images/tmp_nfts.jpg" alt="tmp"></div>
                 <div class="nfts_item_info">
                   <div class="inner">
                     <div class="title">
                       <span class="txt">Richman #9028</span>
-                      <button type="button" class="btn_small">Details</button>
+                      <a href="#" target="_blank" class="btn_small">Details</a>
                     </div>
                     <span class="label">Landmark</span>
                   </div>
                 </div>
                 <div class="nfts_item_action">
                   <div class="inner">
-                    <button type="button" class="btn_add"><span class="ico">Add</span></button>
-                    <span>RETRIEVE NFT</span>
+                    <button type="button" class="btn_action" onclick="dialogOpen('pop02')">
+                      <span class="ico_add">Del</span>
+                      <span>RETRIEVE NFT</span>
+                    </button>
+
                     <div class="tooltip">
                       <button type="button" class="tooltip_btn"><span class="ico">info</span></button>
                       <div class="tooltip_pop">
@@ -181,18 +192,21 @@
               </div>
 
               <div class="nfts_item">
+                <a href="#" target="_blank" class="nfts_item_opensea"><img src="../../src/resources/images/icon/ico_opensea_w.svg" alt="OpenSea"></a>
                 <div class="nfts_item_photo"><img src="../../src/resources/images/tmp_nfts.jpg" alt="tmp"></div>
                 <div class="nfts_item_info">
                   <div class="title">
                     <span class="txt">Richman #9028</span>
-                    <button type="button" class="btn_small">Details</button>
+                    <a href="#" target="_blank" class="btn_small">Details</a>
                   </div>
                   <span class="label">Landmark</span>
                 </div>
                 <div class="nfts_item_action add">
                   <div class="inner">
-                    <button type="button" class="btn_add plus"><span class="ico">Add</span></button>
-                    <span>USE IN GAME</span>
+                    <button type="button" class="btn_action" onclick="dialogOpen('pop01')">
+                      <span class="ico_add plus">Add</span>
+                      <span>USE IN GAME</span>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -239,12 +253,13 @@
         <div class="pop_content">
 
           <div class="nfts_item">
+            <a href="#" target="_blank" class="nfts_item_opensea"><img src="../../src/resources/images/icon/ico_opensea_w.svg" alt="OpenSea"></a>
             <div class="nfts_item_photo"><img src="../../src/resources/images/tmp_nfts.jpg" alt="tmp"></div>
             <div class="nfts_item_info">
               <div class="inner">
                 <div class="title">
                   <span class="txt">Richman #9028</span>
-                  <button type="button" class="btn_small">Details</button>
+                  <a href="#" target="_blank" class="btn_small">Details</a>
                 </div>
                 <span class="label">Landmark</span>
               </div>
@@ -252,7 +267,7 @@
           </div>
           <!-- nfts_item end -->
 
-          <p>By agreeing to use this item, your NFT will be sent to the SpinMeta account
+          <p class="pop_msg">By agreeing to use this item, your NFT will be sent to the SpinMeta account
             wallet. If you choose to sell your NFT, you will be able to retrieve your NFT at
             any time.</p>
 
@@ -266,13 +281,55 @@
             </li>
           </ul>
 
-          <p><strong>ARE YOU SURE YOU WOULD LIKE TO USE THIS ITEM IN GAME?</strong></p>
+          <p class="pop_msg"><strong>ARE YOU SURE YOU WOULD LIKE TO USE THIS ITEM IN GAME?</strong></p>
 
         </div>
       </div>
       <div class="pop_footer">
-        <button type="button" class="btn_add plus"><span class="ico">Add</span></button>
-        <span>USE IN GAME</span>
+        <button type="button" class="btn_action">
+          <span class="ico_add plus">Add</span>
+          <span>USE IN GAME</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- dialog end -->
+
+  <!-- dialog start -->
+  <div class="pop_wrap hide" id="pop02">
+    <div class="pop_box">
+      <button type="button" class="btn_pop_close" onclick="dialogClose('pop02')"><span class="ico">Close</span></button>
+      <div class="pop_container">
+        <div class="pop_content">
+
+          <div class="nfts_item">
+            <a href="#" target="_blank" class="nfts_item_opensea"><img src="../../src/resources/images/icon/ico_opensea_w.svg" alt="OpenSea"></a>
+            <div class="nfts_item_photo"><img src="../../src/resources/images/tmp_nfts.jpg" alt="tmp"></div>
+            <div class="nfts_item_info">
+              <div class="inner">
+                <div class="title">
+                  <span class="txt">Richman #9028</span>
+                  <a href="#" target="_blank" class="btn_small">Details</a>
+                </div>
+                <span class="label">Landmark</span>
+              </div>
+            </div>
+          </div>
+          <!-- nfts_item end -->
+
+          <p class="pop_msg nfts_pop_msg">By retrieving your NFT you will no longer be able to use this item in the game.<br>
+            To use this item again, you will have to pay gas fees.
+          </p>
+
+          <p class="pop_msg"><strong>ARE YOU SURE YOU WOULD LIKE TO RETRIEVE YOUR NFT?</strong></p>
+
+        </div>
+      </div>
+      <div class="pop_footer">
+        <button type="button" class="btn_action">
+          <span class="ico_add">Add</span>
+          <span>RETRIEVE NFT</span>
+        </button>
       </div>
     </div>
   </div>
@@ -296,7 +353,6 @@
 <script src="https://code.jquery.com/jquery-3.6.3.slim.js" integrity="sha256-DKU1CmJ8kBuEwumaLuh9Tl/6ZB6jzGOBV/5YpNE2BWc=" crossorigin="anonymous"></script>
 <!-- mobile nav -->
 <script src="../../src/resources/js/nav.js"></script>
-
 
 </body>
 </html>

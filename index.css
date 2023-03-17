@@ -565,6 +565,10 @@ textarea,
   border-radius: 0 0 24px 24px;
   background-color: #b23cf4;
   color: #fff;
+  font-size: 20px;
+}
+.pop_footer .btn_action {
+  font-size: 20px;
 }
 
 .label_title {
@@ -613,6 +617,13 @@ textarea,
   margin: 0 0 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 }
+.pop_content .pop_msg {
+  letter-spacing: 0;
+}
+.pop_content .pop_msg strong {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
 .list_pop {
   margin: 10px 0;
@@ -622,6 +633,7 @@ textarea,
   margin: 10px 0;
   padding-left: 18px;
   color: #5c6573;
+  letter-spacing: 0;
 }
 .list_pop li::before {
   content: "";
@@ -632,6 +644,97 @@ textarea,
   height: 6px;
   border: 2px solid #b23cf4;
   transform: rotate(45deg);
+}
+
+.nfts_pop_msg {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.nfts_pop_msg + .list_pop {
+  margin-top: 0;
+}
+
+.pop_tit {
+  font-size: 38px;
+}
+
+.pop_cash {
+  width: calc(100% - 20px);
+  padding-bottom: 45px;
+  margin: 0 10px 45px;
+  border-bottom: 1px solid #d6dbe9;
+  text-align: center;
+}
+
+.pop_cash_noti {
+  font-weight: 600;
+}
+.pop_cash_noti .arr {
+  position: relative;
+  display: inline-flex;
+  width: 10px;
+  height: 2px;
+  align-items: center;
+  margin: 2px 15px 0 8px;
+  color: transparent;
+  background-color: #1b1d28;
+}
+.pop_cash_noti .arr::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  transform: translateY(-50%);
+  border-style: solid;
+  border-width: 4px 6px;
+  border-color: transparent transparent transparent #1b1d28;
+}
+
+.pop_cash_change {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 15px;
+  background: url(src/resources/images/icon/ico_arr_lg.png) no-repeat center center;
+  background-size: auto 24px;
+}
+
+.pop_cash_point,
+.pop_cash_usd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 220px;
+  height: 72px;
+  border-radius: 72px;
+  padding: 10px 30px 10px 70px;
+  background-color: #fff;
+  background-size: 51px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+.pop_cash_point .label,
+.pop_cash_usd .label {
+  font-size: 14px;
+  color: #5c5d64;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+.pop_cash_point .value,
+.pop_cash_usd .value {
+  font-size: 22px;
+}
+
+.pop_cash_point {
+  background-image: url(src/resources/images/icon/ico_table_point_lg.png);
+}
+
+.pop_cash_usd {
+  background-image: url(src/resources/images/icon/ico_table_coin_lg.png);
+}
+.pop_cash_usd .value {
+  color: #a936e9;
 }
 
 html {
@@ -693,6 +796,22 @@ small {
   min-height: calc(100vh - 320px);
   background-color: #fff;
   color: #1b1d28;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 .header {
@@ -1773,6 +1892,7 @@ small {
 }
 
 .nfts_item {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: calc(25% - 20px);
@@ -1786,6 +1906,27 @@ small {
 }
 .nfts_item:hover .nfts_item_photo img {
   transform: scale(1.05);
+}
+
+.nfts_item_opensea {
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s;
+}
+.nfts_item_opensea:hover {
+  background-color: #1d67d5;
+}
+.nfts_item_opensea img {
+  width: 22px;
 }
 
 .nfts_item_photo {
@@ -1849,7 +1990,19 @@ small {
   color: #fff;
 }
 
+.btn_action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: currentColor;
+  font-weight: 500;
+}
+
 .btn_small {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   height: 2.2em;
   padding: 0 12px;
   border: 1px solid #eaeef8;
@@ -1863,16 +2016,20 @@ small {
   border-color: #b23cf4;
 }
 
-.btn_add {
+.ico_add {
   position: relative;
+  display: inline-block;
   width: 24px;
   height: 24px;
   margin-right: 6px;
   border: 2px solid currentColor;
   border-radius: 50%;
   color: inherit;
+  overflow: hidden;
+  text-indent: -9999px;
+  white-space: nowrap;
 }
-.btn_add::before {
+.ico_add::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1882,14 +2039,8 @@ small {
   background-color: currentColor;
   transform: translate(-50%, -50%);
 }
-.btn_add .ico {
-  display: inline-block;
-  overflow: hidden;
-  text-indent: -9999px;
-  white-space: nowrap;
-}
 
-.btn_add.plus::after {
+.ico_add.plus::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -2475,7 +2626,7 @@ small {
   }
 
   .tooltip_btn,
-.btn_add {
+.ico_add {
     width: 4vw;
     height: 4vw;
     max-width: 22px;

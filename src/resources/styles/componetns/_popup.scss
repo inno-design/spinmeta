@@ -66,6 +66,11 @@
   border-radius: 0 0 24px 24px;
   background-color: #b23cf4;
   color: #fff;
+  font-size: 20px;
+
+  .btn_action {
+    font-size: 20px;
+  }
 }
 
 .label_title {
@@ -122,6 +127,15 @@
     margin: 0 0 30px;
     box-shadow: 0 0 10px rgba(0,0,0,0.12);
   }
+
+  .pop_msg {
+    letter-spacing: 0;
+
+    strong {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .list_pop {
@@ -132,6 +146,7 @@
     margin: 10px 0;
     padding-left: 18px;
     color: #5c6573;
+    letter-spacing: 0;
 
     &::before {
       content: '';
@@ -143,5 +158,100 @@
       border: 2px solid #b23cf4;
       transform: rotate(45deg);
     }
+  }
+}
+
+.nfts_pop_msg {
+  margin-bottom: 30px;
+  text-align: center;
+
+  & + .list_pop {
+    margin-top: 0;
+  }
+}
+
+.pop_tit {
+  font-size: 38px;
+}
+
+.pop_cash {
+  width: calc(100% - 20px);
+  padding-bottom: 45px;
+  margin: 0 10px 45px;
+  border-bottom: 1px solid #d6dbe9;
+  text-align: center;
+}
+
+.pop_cash_noti {
+  font-weight: 600;
+
+  .arr {
+    position: relative;
+    display: inline-flex;
+    width: 10px;
+    height: 2px;
+    align-items: center;
+    margin: 2px 15px 0 8px;
+    color: transparent;
+    background-color: #1b1d28;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -12px;
+      transform: translateY(-50%);
+      border-style: solid;
+      border-width: 4px 6px;
+      border-color: transparent transparent transparent #1b1d28;
+    }
+  }
+}
+
+.pop_cash_change {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 15px;
+  background: url(src/resources/images/icon/ico_arr_lg.png) no-repeat center center;
+  background-size: auto 24px;
+}
+
+.pop_cash_point,
+.pop_cash_usd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 220px;
+  height: 72px;
+  border-radius: 72px;
+  padding: 10px 30px 10px 70px;
+  background-color: #fff;
+  background-size: 51px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+
+  .label {
+    font-size: 14px;
+    color: #5c5d64;
+    letter-spacing: 0;
+    font-weight: 500;
+  }
+
+  .value {
+    font-size: 22px;
+  }
+}
+
+.pop_cash_point {
+  background-image: url(src/resources/images/icon/ico_table_point_lg.png)
+}
+
+.pop_cash_usd {
+  background-image: url(src/resources/images/icon/ico_table_coin_lg.png);
+
+  .value {
+    color: #a936e9
   }
 }

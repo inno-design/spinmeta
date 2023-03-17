@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="8" viewBox="0 0 16 8">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1b1d28;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="모양_10" data-name="모양 10" class="cls-1" d="M1041,941l-6.67-4v2.667H1025v2.666h9.33V945Z" transform="translate(-1025 -937)"/>
+</svg>
