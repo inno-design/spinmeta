@@ -2737,11 +2737,12 @@ small {
   .list_pop li {
     margin: 0.5em 0;
     font-size: 2vw;
-    padding-left: 12px;
+    padding-left: 9px;
   }
   .list_pop li::before {
-    width: 4px;
-    height: 4px;
+    top: 0.5em;
+    width: 3px;
+    height: 3px;
     border-width: 1px;
   }
 
