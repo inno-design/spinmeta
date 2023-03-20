@@ -781,7 +781,7 @@ small {
   min-width: 280px;
   min-height: 100%;
   margin: 0 auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .content_wrapper {
@@ -1518,6 +1518,7 @@ small {
 .mypage_detail .content_wrapper {
   padding-top: 60px;
   padding-bottom: 120px;
+  overflow: hidden;
 }
 
 .profile_photo {
