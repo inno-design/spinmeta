@@ -613,7 +613,9 @@ textarea,
 }
 
 .pop_content .nfts_item {
-  width: 300px;
+  width: 70%;
+  max-width: 300px;
+  min-width: 180px;
   margin: 0 0 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
 }
@@ -651,7 +653,7 @@ textarea,
   text-align: center;
 }
 .nfts_pop_msg + .list_pop {
-  margin-top: 0;
+  margin: 0;
 }
 
 .pop_tit {
@@ -705,14 +707,16 @@ textarea,
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  width: 220px;
-  height: 72px;
+  width: 30vw;
+  max-width: 220px;
+  height: 10vw;
+  max-height: 72px;
   border-radius: 72px;
   padding: 10px 30px 10px 70px;
   background-color: #fff;
-  background-size: 51px;
   background-repeat: no-repeat;
   background-position: 10px center;
+  background-size: 51px;
 }
 .pop_cash_point .label,
 .pop_cash_usd .label {
@@ -720,6 +724,7 @@ textarea,
   color: #5c5d64;
   letter-spacing: 0;
   font-weight: 500;
+  white-space: nowrap;
 }
 .pop_cash_point .value,
 .pop_cash_usd .value {
@@ -1916,8 +1921,10 @@ small {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 8vw;
+  height: 8vw;
+  max-width: 40px;
+  max-height: 40px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3);
   transition: background-color 0.2s;
@@ -1926,7 +1933,8 @@ small {
   background-color: #1d67d5;
 }
 .nfts_item_opensea img {
-  width: 22px;
+  width: 55%;
+  max-width: 22px;
 }
 
 .nfts_item_photo {
@@ -1997,6 +2005,7 @@ small {
   height: 100%;
   color: currentColor;
   font-weight: 500;
+  font-size: inherit;
 }
 
 .btn_small {
@@ -2689,16 +2698,90 @@ small {
     top: 3vw;
     right: 3vw;
   }
+
+  .pop_box {
+    border-radius: 12px 12px 15px 15px;
+  }
+
+  .pop_content {
+    padding: 8vw 4vw;
+  }
+  .pop_content .pop_msg {
+    font-size: 2vw;
+  }
+  .pop_content .pop_msg strong {
+    font-size: 2.5vw;
+    letter-spacing: 0;
+  }
+  .pop_content .nfts_item,
+.pop_content .nfts_pop_msg {
+    margin-bottom: 5vw;
+  }
+
+  .pop_footer {
+    height: 4em;
+    border-radius: 0 0 12px 12px;
+    font-size: 3vw;
+  }
+  .pop_footer .btn_action {
+    font-size: inherit;
+  }
+
+  .btn_pop_close {
+    top: 3px;
+    right: 3px;
+    transform: scale(0.6);
+  }
+
+  .list_pop li {
+    margin: 0.5em 0;
+    font-size: 2vw;
+  }
+
+  .pop_cash {
+    margin-bottom: 5vw;
+    padding-bottom: 5vw;
+  }
+
+  .pop_cash_noti {
+    font-size: 2vw;
+    letter-spacing: 0;
+  }
+
+  .pop_cash_change {
+    margin: 5vw 0 2.5vw;
+    background-size: auto 3vw;
+  }
+
+  .pop_cash_point,
+.pop_cash_usd {
+    padding: 0 3vw 0 10vw;
+    background-position: 1vw center;
+    background-size: 8vw;
+  }
+  .pop_cash_point .label,
+.pop_cash_usd .label {
+    font-size: 2vw;
+  }
+  .pop_cash_point .value,
+.pop_cash_usd .value {
+    letter-spacing: 0;
+    font-size: 3vw;
+  }
+
+  .pop_tit {
+    font-size: 7vw;
+  }
 }
 @media screen and (max-width: 459px) {
   .table_dashboard .tooltip .tooltip_pop {
     top: calc(100% + 2px);
   }
 
-  .btn_add {
+  .ico_add {
     border-width: 1px;
   }
-  .btn_add::before, .btn_add.plus::after {
+  .ico_add::before, .ico_add.plus::after {
     height: 1px;
   }
 }

@@ -483,7 +483,77 @@
       right: 3vw;
     }
   }
+  .pop_box {
+    border-radius: 12px 12px 15px 15px;
+  }
+  .pop_content {
+    padding: 8vw 4vw;
 
+    .pop_msg {
+      font-size: 2vw;
+
+      strong {
+        font-size: 2.5vw;
+        letter-spacing: 0;
+      }
+    }
+
+    .nfts_item,
+    .nfts_pop_msg {
+      margin-bottom: 5vw;
+    }
+  }
+  .pop_footer {
+    height: 4em;
+    border-radius: 0 0 12px 12px;
+    font-size: 3vw;
+
+    .btn_action {
+      font-size: inherit;
+    }
+  }
+  .btn_pop_close {
+    top: 3px;
+    right: 3px;
+    transform: scale(0.6);
+  }
+  .list_pop li {
+    margin: 0.5em 0;
+    font-size: 2vw;
+  }
+  .pop_cash {
+    margin-bottom: 5vw;
+    padding-bottom: 5vw;
+  }
+  .pop_cash_noti {
+    font-size: 2vw;
+    letter-spacing: 0;
+  }
+
+  .pop_cash_change {
+    margin: 5vw 0 2.5vw;
+    background-size: auto 3vw;
+  }
+
+  .pop_cash_point,
+  .pop_cash_usd {
+    padding: 0 3vw 0 10vw;
+    background-position: 1vw center;
+    background-size: 8vw;
+
+    .label {
+      font-size: 2vw;
+    }
+
+    .value {
+      letter-spacing: 0;
+      font-size: 3vw;
+    }
+  }
+
+  .pop_tit {
+    font-size: 7vw;
+  }
 }
 
 @media screen and (max-width: 459px) {
@@ -491,7 +561,7 @@
     top: calc(100% + 2px)
   }
 
-  .btn_add {
+  .ico_add {
     border-width: 1px;
 
     &::before,
