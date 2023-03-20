@@ -798,6 +798,8 @@ small {
 
 .container_sub,
 .container_login {
+  z-index: 1;
+  position: relative;
   min-height: calc(100vh - 320px);
   background-color: #fff;
   color: #1b1d28;
@@ -1022,7 +1024,6 @@ small {
 
 .footer {
   position: relative;
-  z-index: 1000;
   padding-top: 60px;
   padding-bottom: 40px;
 }
@@ -1518,7 +1519,6 @@ small {
 .mypage_detail .content_wrapper {
   padding-top: 60px;
   padding-bottom: 120px;
-  overflow: hidden;
 }
 
 .profile_photo {
@@ -2737,6 +2737,12 @@ small {
   .list_pop li {
     margin: 0.5em 0;
     font-size: 2vw;
+    padding-left: 12px;
+  }
+  .list_pop li::before {
+    width: 4px;
+    height: 4px;
+    border-width: 1px;
   }
 
   .pop_cash {

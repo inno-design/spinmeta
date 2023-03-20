@@ -520,6 +520,13 @@
   .list_pop li {
     margin: 0.5em 0;
     font-size: 2vw;
+    padding-left: 12px;
+
+    &::before {
+      width: 4px;
+      height: 4px;
+      border-width: 1px;
+    }
   }
   .pop_cash {
     margin-bottom: 5vw;
